@@ -1,0 +1,2070 @@
+<!DOCTYPE html>
+<html lang="id" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ASAS Narrative Literacy CBT — Bahasa Inggris Kelas VIII (Fase D)</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+            serif: ['Playfair Display', 'serif'],
+          },
+          colors: {
+            obsidian: '#0A070D',
+            velvetDark: '#130D1A',
+            velvetBorder: '#2D1E3D',
+            goldPrime: '#F59E0B',
+            goldBright: '#FFD700',
+            goldDeep: '#D97706',
+            pinkPrime: '#EC4899',
+            pinkNeon: '#FF2A85',
+            pinkSoft: '#F472B6',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    /* Strict anti-copy & selection protection during active exam */
+    body.exam-locked-copy,
+    body.exam-locked-copy * {
+      -webkit-user-select: none !important;
+      -moz-user-select: none !important;
+      -ms-user-select: none !important;
+      user-select: none !important;
+    }
+
+    .glass-panel {
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+    }
+
+    /* Golden Yellow & Futuristic Neon Pink Gradients */
+    .gold-pink-gradient {
+      background: linear-gradient(135deg, #FFD700 0%, #F59E0B 42%, #EC4899 78%, #FF2A85 100%);
+    }
+
+    .gold-btn {
+      background: linear-gradient(135deg, #FFD700 0%, #F59E0B 60%, #D97706 100%);
+      color: #0A070D;
+      font-weight: 800;
+      box-shadow: 0 4px 22px -2px rgba(245, 158, 11, 0.48);
+      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .gold-btn:hover:not(:disabled) {
+      transform: translateY(-1px);
+      box-shadow: 0 8px 28px -2px rgba(255, 215, 0, 0.65);
+    }
+
+    .pink-btn {
+      background: linear-gradient(135deg, #FF2A85 0%, #EC4899 60%, #DB2777 100%);
+      color: #FFFFFF;
+      font-weight: 700;
+      box-shadow: 0 4px 20px -2px rgba(236, 72, 153, 0.45);
+      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .pink-btn:hover:not(:disabled) {
+      transform: translateY(-1px);
+      box-shadow: 0 8px 26px -2px rgba(255, 42, 133, 0.65);
+    }
+
+    /* Futuristic Cyber Gold-Pink Grid Background */
+    .bg-cyber-goldpink {
+      background-size: 38px 38px;
+      background-image: 
+        linear-gradient(to right, rgba(236, 72, 153, 0.06) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 215, 0, 0.06) 1px, transparent 1px);
+    }
+
+    /* Ornate Golden-Pink Certificate Frame */
+    .cert-gold-pink-frame {
+      background: radial-gradient(circle at top right, rgba(255, 42, 133, 0.20), transparent 48%),
+                  radial-gradient(circle at bottom left, rgba(255, 215, 0, 0.18), transparent 48%),
+                  linear-gradient(145deg, #0D0914 0%, #181024 100%);
+      border: 3px solid #FFD700;
+      box-shadow: inset 0 0 0 6px #0D0914, inset 0 0 0 8px #FF2A85, 0 24px 60px rgba(0, 0, 0, 0.7);
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar { width: 6px; height: 6px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: rgba(236, 72, 153, 0.35); border-radius: 9999px; }
+    ::-webkit-scrollbar-thumb:hover { background: rgba(255, 215, 0, 0.8); }
+
+    @media print {
+      body * { visibility: hidden !important; }
+      #certificatePrintArea, #certificatePrintArea * { visibility: visible !important; }
+      #certificatePrintArea {
+        position: fixed !important;
+        left: 0 !important;
+        top: 0 !important;
+        width: 100vw !important;
+        height: 100vh !important;
+        margin: 0 !important;
+        padding: 20px !important;
+        z-index: 99999 !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+      }
+    }
+  </style>
+</head>
+<body class="bg-amber-50/40 text-slate-900 dark:bg-obsidian dark:text-slate-100 bg-cyber-goldpink min-h-screen font-sans antialiased transition-colors duration-300">
+
+  <!-- GLOBAL NOTIFICATION TOAST -->
+  <div id="toastContainer" class="fixed top-4 right-4 z-[100] flex flex-col gap-2 pointer-events-none max-w-sm w-full px-4 sm:px-0"></div>
+
+  <!-- CUSTOM MODAL DIALOG (NO alert()/confirm()) -->
+  <div id="customModal" class="fixed inset-0 z-[95] hidden items-center justify-center bg-black/80 backdrop-blur-sm p-4">
+    <div class="bg-white dark:bg-velvetDark border border-pink-500/40 dark:border-amber-400/50 rounded-2xl max-w-md w-full p-6 shadow-2xl transform transition-all">
+      <div class="flex items-center gap-3 mb-3">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-400/20 to-pink-500/20 text-pink-500 flex items-center justify-center shrink-0 border border-pink-500/40">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+        </div>
+        <h3 id="modalTitle" class="text-lg font-bold text-slate-900 dark:text-white">Konfirmasi</h3>
+      </div>
+      <p id="modalMessage" class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-6"></p>
+      <div class="flex justify-end gap-3">
+        <button id="modalCancelBtn" class="px-4 py-2.5 rounded-xl text-sm font-semibold border border-slate-300 dark:border-velvetBorder hover:bg-slate-100 dark:hover:bg-white/5 transition" data-i18n="btnCancel">Batal</button>
+        <button id="modalConfirmBtn" class="gold-btn px-5 py-2.5 rounded-xl text-sm" data-i18n="btnConfirm">Ya, Lanjutkan</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================================================================== -->
+  <!-- VIEW 1: ENTERPRISE AUTHENTICATION GATEWAY (HIDDEN CREDENTIALS)        -->
+  <!-- ===================================================================== -->
+  <section id="loginView" class="min-h-screen flex items-center justify-center p-4 relative overflow-hidden">
+    <!-- Ambient Golden Yellow & Neon Pink Orbs -->
+    <div class="absolute -top-28 -left-28 w-96 h-96 bg-amber-400/20 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute -bottom-28 -right-28 w-96 h-96 bg-pink-500/20 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="w-full max-w-lg bg-white/95 dark:bg-velvetDark/95 glass-panel border border-pink-300/60 dark:border-pink-500/35 rounded-3xl shadow-2xl p-6 sm:p-10 relative z-10">
+      <!-- Top Controls -->
+      <div class="flex items-center justify-between mb-6">
+        <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-bold bg-pink-500/10 dark:bg-pink-500/15 text-pink-600 dark:text-pink-300 border border-pink-500/35">
+          <span class="w-2 h-2 rounded-full bg-amber-400 animate-ping"></span>
+          NARRATIVE CBT PROCTOR v5.0
+        </span>
+        <div class="flex items-center gap-2">
+          <button onclick="toggleLanguage()" class="px-3 py-1.5 rounded-xl text-xs font-bold border border-amber-500/45 bg-amber-500/10 text-amber-700 dark:text-amber-300 hover:bg-amber-500/20 transition" id="loginLangBtn">ID / EN</button>
+          <button onclick="toggleTheme()" class="p-2 rounded-xl border border-pink-300/50 dark:border-velvetBorder bg-slate-100 dark:bg-obsidian text-slate-700 dark:text-amber-300 hover:border-pink-500 transition" title="Toggle Theme">
+            <svg class="w-4 h-4 hidden dark:block text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+            <svg class="w-4 h-4 block dark:hidden text-pink-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Brand Emblem -->
+      <div class="text-center mb-8">
+        <div class="w-16 h-16 mx-auto mb-4 rounded-2xl gold-pink-gradient p-0.5 shadow-lg">
+          <div class="w-full h-full bg-obsidian rounded-[14px] flex items-center justify-center">
+            <svg class="w-9 h-9 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+            </svg>
+          </div>
+        </div>
+        <h1 class="text-2xl sm:text-3xl font-black tracking-tight bg-gradient-to-r from-amber-400 via-pink-500 to-amber-300 bg-clip-text text-transparent">
+          ASAS LITERASI NARRATIVE
+        </h1>
+        <p class="text-xs sm:text-sm text-slate-600 dark:text-pink-200/80 mt-1.5 font-medium" data-i18n="loginSubtitle">
+          Asesmen Sumatif Literasi Membaca: Narrative Text • Bahasa Inggris Kelas VIII (Fase D)
+        </p>
+        <p class="text-[11px] text-amber-600 dark:text-amber-400 mt-1 font-semibold">
+          MTs/SMP • 10 Teks Narasi Orisinal • 50 Butir Pilihan Ganda
+        </p>
+      </div>
+
+      <!-- Hidden-Credential Login Form (No exposed default credentials) -->
+      <form id="loginForm" class="space-y-4" autocomplete="off">
+        <div>
+          <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-amber-300 mb-1.5" data-i18n="usernameLabel">Username Akses</label>
+          <div class="relative">
+            <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center text-pink-500">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+            </span>
+            <input type="password" id="loginUsername" required data-i18n-placeholder="phUsername" placeholder="Masukkan Username"
+              class="w-full pl-11 pr-11 py-3 rounded-xl bg-slate-100 dark:bg-obsidian border border-slate-300 dark:border-velvetBorder text-slate-900 dark:text-white focus:outline-none focus:border-pink-500 focus:ring-2 focus:ring-pink-500/25 transition text-sm font-medium" />
+            <button type="button" onclick="togglePassVisibility('loginUsername')" class="absolute inset-y-0 right-0 pr-3.5 flex items-center text-slate-400 hover:text-amber-400" title="Show/Hide">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-amber-300 mb-1.5" data-i18n="passwordLabel">Kata Sandi Keamanan</label>
+          <div class="relative">
+            <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center text-amber-500">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+            </span>
+            <input type="password" id="loginPassword" required data-i18n-placeholder="phPassword" placeholder="Masukkan Kata Sandi"
+              class="w-full pl-11 pr-11 py-3 rounded-xl bg-slate-100 dark:bg-obsidian border border-slate-300 dark:border-velvetBorder text-slate-900 dark:text-white focus:outline-none focus:border-amber-400 focus:ring-2 focus:ring-amber-400/25 transition text-sm font-medium" />
+            <button type="button" onclick="togglePassVisibility('loginPassword')" class="absolute inset-y-0 right-0 pr-3.5 flex items-center text-slate-400 hover:text-pink-400" title="Show/Hide">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <p id="loginError" class="hidden text-xs font-semibold text-rose-500 bg-rose-500/10 border border-rose-500/35 rounded-xl p-3 text-center"></p>
+
+        <button type="submit" class="w-full gold-btn py-3.5 rounded-xl text-sm tracking-wide uppercase flex items-center justify-center gap-2 mt-2">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"/></svg>
+          <span data-i18n="loginBtn">Masuk ke Portal Asesmen</span>
+        </button>
+      </form>
+
+      <!-- Creator Credit -->
+      <div class="mt-8 pt-4 border-t border-slate-200 dark:border-velvetBorder text-center">
+        <p class="text-[11px] uppercase tracking-widest text-pink-500/80 font-semibold">Enterprise Assessment Platform • Gold & Neon Pink Edition</p>
+        <p class="text-xs font-extrabold text-amber-600 dark:text-amber-400 mt-0.5">Pembuat Aplikasi: Ahmad Budi Leksono</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================== -->
+  <!-- VIEW 2: STUDENT IDENTITY GATE (MENU IDENTITAS MURID DI AWAL)          -->
+  <!-- ===================================================================== -->
+  <section id="identityView" class="hidden min-h-screen flex items-center justify-center p-4 relative">
+    <div class="w-full max-w-2xl bg-white/95 dark:bg-velvetDark/95 glass-panel border border-pink-300/60 dark:border-pink-500/35 rounded-3xl shadow-2xl p-6 sm:p-10">
+      <div class="flex flex-wrap items-center justify-between gap-3 mb-6 pb-4 border-b border-slate-200 dark:border-velvetBorder">
+        <div>
+          <span class="px-3 py-1 rounded-full text-xs font-bold bg-pink-500/15 text-pink-600 dark:text-pink-300 border border-pink-500/35" data-i18n="stepBadge">REGISTRASI PESERTA ASESMEN</span>
+          <h2 class="text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white mt-2" data-i18n="identityTitle">Menu Identitas Murid</h2>
+        </div>
+        <div class="flex items-center gap-2">
+          <button onclick="toggleLanguage()" class="px-3 py-1.5 rounded-xl text-xs font-bold border border-amber-500/45 bg-amber-500/10 text-amber-700 dark:text-amber-300" id="idLangBtn">ID / EN</button>
+          <button onclick="toggleTheme()" class="p-2 rounded-xl border border-pink-300/50 dark:border-velvetBorder bg-slate-100 dark:bg-obsidian text-slate-700 dark:text-amber-300">
+            <svg class="w-4 h-4 hidden dark:block text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+            <svg class="w-4 h-4 block dark:hidden text-pink-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Auto-Shuffle & Proctoring Security Notice -->
+      <div class="mb-6 p-4 rounded-2xl bg-gradient-to-r from-amber-500/10 to-pink-500/10 border border-pink-500/35 flex items-start gap-3">
+        <svg class="w-6 h-6 text-pink-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        <div class="text-xs text-slate-700 dark:text-slate-200 space-y-1">
+          <p class="font-bold text-amber-600 dark:text-amber-400" data-i18n="identityNoticeTitle">Sistem Pengacakan Otomatis & Penguncian Keamanan:</p>
+          <p data-i18n="identityNoticeDesc">Jika identitas murid berubah, sistem otomatis me-reset seluruh jawaban dan mengacak urutan teks narasi, soal, serta opsi jawaban tanpa mengubah substansi materi. Durasi pengerjaan dibatasi 80 menit real-time. Membuka tab baru, berpindah ke search engine/aplikasi lain, atau mengunci layar perangkat akan mengunci aplikasi secara otomatis.</p>
+        </div>
+      </div>
+
+      <form id="identityForm" class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div class="sm:col-span-2">
+          <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-amber-300 mb-1.5" data-i18n="fieldNama">Nama Lengkap Murid *</label>
+          <input type="text" id="studentName" required placeholder="Contoh: Zahra Aulia Putri"
+            class="w-full px-4 py-3 rounded-xl bg-slate-100 dark:bg-obsidian border border-slate-300 dark:border-velvetBorder text-slate-900 dark:text-white focus:outline-none focus:border-pink-500 text-sm font-medium" />
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-amber-300 mb-1.5" data-i18n="fieldKelas">Kelas *</label>
+          <input type="text" id="studentClass" required placeholder="Contoh: VIII-A"
+            class="w-full px-4 py-3 rounded-xl bg-slate-100 dark:bg-obsidian border border-slate-300 dark:border-velvetBorder text-slate-900 dark:text-white focus:outline-none focus:border-pink-500 text-sm font-medium" />
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-amber-300 mb-1.5" data-i18n="fieldPresensi">Nomor Presensi *</label>
+          <input type="text" id="studentNumber" required placeholder="Contoh: 14"
+            class="w-full px-4 py-3 rounded-xl bg-slate-100 dark:bg-obsidian border border-slate-300 dark:border-velvetBorder text-slate-900 dark:text-white focus:outline-none focus:border-pink-500 text-sm font-medium" />
+        </div>
+
+        <div class="sm:col-span-2">
+          <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-amber-300 mb-1.5" data-i18n="fieldMadrasah">Asal Madrasah / Sekolah *</label>
+          <input type="text" id="studentSchool" required placeholder="Contoh: MTs Negeri 1 Kota Malang"
+            class="w-full px-4 py-3 rounded-xl bg-slate-100 dark:bg-obsidian border border-slate-300 dark:border-velvetBorder text-slate-900 dark:text-white focus:outline-none focus:border-pink-500 text-sm font-medium" />
+        </div>
+
+        <!-- Assessment Specs -->
+        <div class="sm:col-span-2 grid grid-cols-3 gap-3 p-3.5 rounded-2xl bg-slate-100 dark:bg-obsidian border border-pink-500/25 text-center">
+          <div>
+            <p class="text-[11px] text-slate-500 dark:text-pink-300/75" data-i18n="specQuestions">Jumlah Soal</p>
+            <p class="text-sm font-extrabold text-slate-800 dark:text-white">50 Butir (10 Teks)</p>
+          </div>
+          <div class="border-x border-slate-300 dark:border-velvetBorder">
+            <p class="text-[11px] text-slate-500 dark:text-pink-300/75" data-i18n="specDuration">Batas Waktu</p>
+            <p class="text-sm font-extrabold text-amber-600 dark:text-amber-400">80 Menit</p>
+          </div>
+          <div>
+            <p class="text-[11px] text-slate-500 dark:text-pink-300/75" data-i18n="specCert">Syarat Sertifikat</p>
+            <p class="text-sm font-extrabold text-pink-600 dark:text-pink-400">Skor ≥ 80</p>
+          </div>
+        </div>
+
+        <div class="sm:col-span-2 flex flex-col sm:flex-row gap-3 pt-2">
+          <button type="button" onclick="logoutToLogin()" class="px-5 py-3.5 rounded-xl text-sm font-semibold border border-slate-300 dark:border-velvetBorder hover:bg-slate-200/60 dark:hover:bg-white/5 transition" data-i18n="btnBackLogin">
+            Kembali
+          </button>
+          <button type="submit" class="flex-1 gold-btn py-3.5 rounded-xl text-sm uppercase tracking-wider flex items-center justify-center gap-2">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            <span data-i18n="btnStartExam">Mulai Asesmen Sekarang</span>
+          </button>
+        </div>
+      </form>
+
+      <div class="mt-6 text-center text-xs text-slate-400">
+        Pembuat Aplikasi: <strong class="text-amber-500">Ahmad Budi Leksono</strong>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================================== -->
+  <!-- VIEW 3: PROCTORING SECURITY LOCKOUT SCREEN (ANTI-CHEAT BREACH)        -->
+  <!-- ===================================================================== -->
+  <section id="lockoutView" class="hidden fixed inset-0 z-[90] bg-obsidian/98 backdrop-blur-xl flex items-center justify-center p-4 overflow-y-auto">
+    <div class="max-w-lg w-full bg-velvetDark border-2 border-pink-500 rounded-3xl p-6 sm:p-8 shadow-[0_0_80px_rgba(255,42,133,0.45)] text-center relative">
+      <div class="w-20 h-20 mx-auto mb-5 rounded-2xl bg-pink-500/20 border border-pink-500 flex items-center justify-center animate-pulse">
+        <svg class="w-11 h-11 text-pink-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+        </svg>
+      </div>
+
+      <span class="inline-block px-3 py-1 rounded-full text-xs font-mono font-bold bg-pink-500/20 text-pink-300 border border-pink-500/45 mb-3">
+        PROCTORING SECURITY LOCK-OUT
+      </span>
+      <h2 class="text-2xl sm:text-3xl font-extrabold text-white mb-2" data-i18n="lockoutTitle">APLIKASI TERKUNCI OTOMATIS!</h2>
+      <p id="lockoutReasonText" class="text-sm text-pink-100/90 leading-relaxed mb-5">
+        Sistem mendeteksi Anda membuka tab browser baru, berpindah ke search engine/aplikasi lain, atau mengunci layar perangkat. Sesi pengerjaan Anda dihentikan dan dikunci secara otomatis.
+      </p>
+
+      <div class="bg-black/60 border border-pink-500/35 rounded-2xl p-4 text-left text-xs text-slate-200 space-y-1.5 mb-6 font-mono">
+        <div><span class="text-amber-400">PESERTA :</span> <span id="lockStudentName">-</span></div>
+        <div><span class="text-amber-400">KELAS   :</span> <span id="lockStudentClass">-</span></div>
+        <div><span class="text-amber-400">STATUS  :</span> <span class="text-pink-400 font-bold">LOCKED / TERMINATED</span></div>
+        <div><span class="text-amber-400">WAKTU   :</span> <span id="lockTimestamp">-</span></div>
+      </div>
+
+      <!-- Supervisor / Proctor Unlock Box -->
+      <div class="bg-obsidian/95 border border-amber-400/45 rounded-2xl p-4 text-left">
+        <p class="text-xs font-bold uppercase tracking-wider text-amber-400 mb-3" data-i18n="proctorUnlockTitle">Otorisasi Pengawas untuk Membuka Kunci:</p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 mb-3">
+          <input type="password" id="unlockUser" placeholder="Username Pengawas" class="px-3.5 py-2.5 rounded-xl bg-velvetDark border border-velvetBorder text-white text-xs focus:outline-none focus:border-pink-500" />
+          <input type="password" id="unlockPass" placeholder="Kata Sandi Pengawas" class="px-3.5 py-2.5 rounded-xl bg-velvetDark border border-velvetBorder text-white text-xs focus:outline-none focus:border-amber-400" />
+        </div>
+        <p id="unlockError" class="hidden text-xs text-pink-400 mb-2 font-semibold"></p>
+        <div class="flex flex-col sm:flex-row gap-2">
+          <button onclick="attemptProctorUnlock(false)" class="flex-1 pink-btn py-2.5 px-4 rounded-xl text-xs uppercase tracking-wider">
+            Buka Kunci & Lanjutkan
+          </button>
+          <button onclick="attemptProctorUnlock(true)" class="flex-1 gold-btn py-2.5 px-4 rounded-xl text-xs uppercase tracking-wider">
+            Reset & Ganti Identitas
+          </button>
+        </div>
+      </div>
+
+      <p class="mt-5 text-[11px] text-pink-200/60">Pembuat Aplikasi: <strong class="text-amber-400">Ahmad Budi Leksono</strong></p>
+    </div>
+  </section>
+
+  <!-- ===================================================================== -->
+  <!-- VIEW 4: MAIN ENTERPRISE CBT WORKSPACE (SIDEBAR + EXAM + NAVIGATOR)    -->
+  <!-- ===================================================================== -->
+  <div id="examWorkspace" class="hidden min-h-screen flex flex-col lg:flex-row">
+
+    <!-- MOBILE HEADER BAR -->
+    <header class="lg:hidden sticky top-0 z-40 bg-white/95 dark:bg-velvetDark/95 glass-panel border-b border-pink-300/40 dark:border-velvetBorder px-4 py-3 flex items-center justify-between">
+      <div class="flex items-center gap-2.5">
+        <button onclick="toggleMobileSidebar()" class="p-2 rounded-xl bg-pink-500/10 text-pink-600 dark:text-pink-300 border border-pink-500/30">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+        <div>
+          <span class="text-xs font-extrabold text-amber-500 block leading-none">ASAS NARRATIVE</span>
+          <span class="text-[11px] text-slate-500 dark:text-pink-200/75" id="mobileStudentBadge">Peserta</span>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-2">
+        <!-- Mobile 80-Minute Countdown -->
+        <div class="px-3 py-1.5 rounded-xl bg-amber-500/15 border border-amber-500/45 font-mono text-sm font-extrabold text-amber-600 dark:text-amber-400" id="mobileTimerDisplay">
+          80:00
+        </div>
+        <button onclick="toggleMobileNavDrawer()" class="p-2 rounded-xl bg-pink-500/15 text-pink-600 dark:text-pink-300 border border-pink-500/35" title="Navigasi Soal">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>
+        </button>
+      </div>
+    </header>
+
+    <!-- LEFT SIDEBAR DASHBOARD -->
+    <aside id="sidebarDashboard" class="fixed inset-y-0 left-0 z-50 w-72 bg-white/95 dark:bg-velvetDark/95 glass-panel border-r border-pink-300/40 dark:border-velvetBorder transform -translate-x-full lg:translate-x-0 lg:static lg:flex lg:flex-col justify-between transition-transform duration-300 overflow-y-auto">
+      <div class="p-5 space-y-5">
+        <!-- Brand Logo -->
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl gold-pink-gradient flex items-center justify-center text-obsidian font-black text-sm shadow-md">
+              ASAS
+            </div>
+            <div>
+              <h1 class="text-sm font-extrabold tracking-tight text-slate-900 dark:text-white leading-tight">NARRATIVE CBT</h1>
+              <p class="text-[11px] font-semibold text-pink-600 dark:text-pink-400">Kelas VIII • Fase D</p>
+            </div>
+          </div>
+          <button onclick="toggleMobileSidebar()" class="lg:hidden p-1.5 rounded-lg text-slate-400 hover:text-white">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+          </button>
+        </div>
+
+        <!-- Student Identity Card -->
+        <div class="p-4 rounded-2xl bg-gradient-to-br from-amber-500/10 via-pink-500/10 to-transparent dark:from-obsidian dark:via-velvetDark dark:to-pink-500/15 border border-pink-400/40 dark:border-pink-500/35 space-y-2">
+          <div class="flex items-center justify-between">
+            <span class="text-[10px] font-mono uppercase tracking-wider px-2 py-0.5 rounded-md bg-pink-500/20 text-pink-600 dark:text-pink-300 font-bold" data-i18n="cardStudentBadge">IDENTITAS PESERTA</span>
+            <span class="w-2 h-2 rounded-full bg-amber-400 animate-ping"></span>
+          </div>
+          <p id="sideStudentName" class="text-sm font-extrabold text-slate-900 dark:text-white truncate">-</p>
+          <div class="grid grid-cols-2 gap-1.5 text-[11px] text-slate-600 dark:text-slate-300 pt-1 border-t border-slate-300 dark:border-velvetBorder">
+            <div><span class="text-slate-400" data-i18n="lblClass">Kelas:</span> <strong id="sideStudentClass" class="text-amber-600 dark:text-amber-400">-</strong></div>
+            <div><span class="text-slate-400" data-i18n="lblNo">Presensi:</span> <strong id="sideStudentNumber" class="text-pink-600 dark:text-pink-400">-</strong></div>
+            <div class="col-span-2 truncate"><span class="text-slate-400" data-i18n="lblSchool">Madrasah:</span> <strong id="sideStudentSchool">-</strong></div>
+          </div>
+        </div>
+
+        <!-- Real-time Progress Dashboard -->
+        <div class="p-4 rounded-2xl bg-slate-100/90 dark:bg-obsidian/90 border border-slate-200 dark:border-velvetBorder space-y-3">
+          <div class="flex items-center justify-between text-xs font-bold">
+            <span class="text-slate-600 dark:text-slate-300" data-i18n="progressTitle">Progres Pengerjaan</span>
+            <span id="progressPercentText" class="text-amber-600 dark:text-amber-400 font-mono">0%</span>
+          </div>
+          <div class="w-full h-2.5 bg-slate-300 dark:bg-velvetDark rounded-full overflow-hidden">
+            <div id="progressBarFill" class="h-full gold-pink-gradient rounded-full transition-all duration-300" style="width: 0%"></div>
+          </div>
+          <div class="grid grid-cols-3 gap-2 text-center pt-1">
+            <div class="p-2 rounded-xl bg-amber-500/15 border border-amber-500/35">
+              <span id="statAnswered" class="block text-sm font-extrabold text-amber-600 dark:text-amber-400">0</span>
+              <span class="text-[10px] text-slate-500 dark:text-slate-400" data-i18n="statDone">Dijawab</span>
+            </div>
+            <div class="p-2 rounded-xl bg-pink-500/15 border border-pink-500/35">
+              <span id="statFlagged" class="block text-sm font-extrabold text-pink-600 dark:text-pink-400">0</span>
+              <span class="text-[10px] text-slate-500 dark:text-slate-400" data-i18n="statFlag">Ragu</span>
+            </div>
+            <div class="p-2 rounded-xl bg-slate-500/10 border border-slate-500/20">
+              <span id="statRemaining" class="block text-sm font-extrabold text-slate-700 dark:text-slate-300">50</span>
+              <span class="text-[10px] text-slate-500 dark:text-slate-400" data-i18n="statLeft">Kosong</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dashboard Navigation Controls -->
+        <nav class="space-y-1.5">
+          <p class="px-2 text-[10px] font-bold uppercase tracking-widest text-pink-500/80 mb-1" data-i18n="menuControl">Sidebar Dashboard</p>
+
+          <button onclick="openIdentityMenu()" class="w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-xs font-semibold text-slate-700 dark:text-slate-200 hover:bg-amber-500/15 hover:text-amber-600 dark:hover:text-amber-400 transition">
+            <svg class="w-4 h-4 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V8a2 2 0 00-2-2h-5m-4 0V5a2 2 0 114 0v1m-4 0a2 2 0 104 0m-5 8a2 2 0 100-4 2 2 0 000 4zm0 0c1.306 0 2.417.835 2.83 2M9 14a3.001 3.001 0 00-2.83 2M15 11h3m-3 4h2"/></svg>
+            <span data-i18n="menuIdentity">Menu Identitas Murid</span>
+          </button>
+
+          <button onclick="switchToExamView()" id="sideExamMenuBtn" class="w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-xs font-semibold text-slate-700 dark:text-slate-200 hover:bg-pink-500/15 hover:text-pink-600 dark:hover:text-pink-400 transition">
+            <svg class="w-4 h-4 text-pink-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+            <span data-i18n="menuExamRoom">Ruang Soal & Stimulus</span>
+          </button>
+
+          <button onclick="toggleLanguage()" class="w-full flex items-center justify-between px-3.5 py-2.5 rounded-xl text-xs font-semibold text-slate-700 dark:text-slate-200 hover:bg-slate-200/70 dark:hover:bg-white/5 transition">
+            <span class="flex items-center gap-3">
+              <svg class="w-4 h-4 text-pink-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"/></svg>
+              <span data-i18n="menuLang">Bahasa Antarmuka</span>
+            </span>
+            <span id="sideLangBadge" class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-amber-500/20 text-amber-500">INDONESIA</span>
+          </button>
+
+          <button onclick="toggleTheme()" class="w-full flex items-center justify-between px-3.5 py-2.5 rounded-xl text-xs font-semibold text-slate-700 dark:text-slate-200 hover:bg-slate-200/70 dark:hover:bg-white/5 transition">
+            <span class="flex items-center gap-3">
+              <svg class="w-4 h-4 text-amber-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+              <span data-i18n="menuTheme">Pencahayaan Layar</span>
+            </span>
+            <span id="sideThemeBadge" class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-pink-500/20 text-pink-400">GELAP</span>
+          </button>
+
+          <button onclick="triggerManualLockout()" class="w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-xs font-bold text-pink-600 dark:text-pink-400 hover:bg-pink-500/15 transition">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+            <span data-i18n="menuLockout">Menu Lock Out</span>
+          </button>
+        </nav>
+      </div>
+
+      <!-- Sidebar Footer: Submit + Creator Credit -->
+      <div class="p-5 border-t border-slate-200 dark:border-velvetBorder space-y-3">
+        <button id="sideSubmitBtn" onclick="confirmSubmitExam()" class="w-full gold-btn py-3 rounded-xl text-xs uppercase tracking-wider flex items-center justify-center gap-2">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          <span data-i18n="btnFinishExam">Selesai & Kumpulkan</span>
+        </button>
+
+        <div class="text-center pt-1">
+          <p class="text-[10px] text-slate-400 uppercase tracking-wider">Developer & Creator</p>
+          <p class="text-xs font-extrabold text-amber-600 dark:text-amber-400">Ahmad Budi Leksono</p>
+        </div>
+      </div>
+    </aside>
+
+    <!-- CENTER CONTENT AREA: QUESTION STAGE OR RESULTS STAGE -->
+    <main class="flex-1 flex flex-col min-w-0">
+
+      <!-- DESKTOP TOP TELEMETRY BAR -->
+      <div class="hidden lg:flex items-center justify-between px-8 py-4 bg-white/85 dark:bg-velvetDark/85 glass-panel border-b border-pink-300/40 dark:border-velvetBorder">
+        <div class="flex items-center gap-3">
+          <span class="px-3 py-1 rounded-full text-xs font-mono font-bold bg-pink-500/15 text-pink-600 dark:text-pink-300 border border-pink-500/35 flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
+            PROCTORING LOCK AKTIF
+          </span>
+          <span class="text-xs text-slate-600 dark:text-slate-300" data-i18n="headerSubject">Literasi Membaca: Narrative Text • Bahasa Inggris Kelas VIII (Fase D)</span>
+        </div>
+
+        <!-- Real-Time Clock & 80-Minute Countdown -->
+        <div class="flex items-center gap-4">
+          <div class="text-right">
+            <span class="block text-[9px] uppercase tracking-widest text-slate-400 font-bold" data-i18n="liveClockLbl">Waktu Sistem</span>
+            <span id="liveSystemClock" class="font-mono text-xs font-bold text-slate-700 dark:text-pink-200">00:00:00</span>
+          </div>
+
+          <div class="flex items-center gap-2.5 px-4 py-2 rounded-2xl bg-slate-100 dark:bg-obsidian border border-amber-400/50 shadow-inner">
+            <svg class="w-5 h-5 text-amber-500 animate-spin" style="animation-duration: 12s;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            <div>
+              <span class="block text-[9px] uppercase tracking-widest text-slate-400 font-bold" data-i18n="timerLabel">Sisa Waktu (80 Menit)</span>
+              <span id="desktopTimerDisplay" class="font-mono text-lg font-extrabold text-amber-600 dark:text-amber-400 tracking-wider">80:00</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- EXAM STAGE CONTAINER -->
+      <div id="examStage" class="flex-1 p-4 sm:p-6 lg:p-8 max-w-5xl w-full mx-auto space-y-6">
+        <!-- Question Header Meta -->
+        <div class="flex flex-wrap items-center justify-between gap-3 bg-white dark:bg-velvetDark border border-pink-300/40 dark:border-velvetBorder rounded-2xl p-4 shadow-sm">
+          <div class="flex items-center gap-3">
+            <span class="px-3.5 py-1.5 rounded-xl gold-pink-gradient text-obsidian font-mono text-sm font-black shadow">
+              <span data-i18n="qWord">SOAL</span> <span id="currentQNumberBadge">1</span> / 50
+            </span>
+            <div class="flex flex-wrap items-center gap-1.5">
+              <span id="qGenreBadge" class="px-2.5 py-1 rounded-lg text-xs font-bold bg-pink-500/15 text-pink-600 dark:text-pink-300 border border-pink-500/35">Fable</span>
+              <span id="qAspectBadge" class="px-2.5 py-1 rounded-lg text-xs font-bold bg-amber-500/15 text-amber-700 dark:text-amber-300 border border-amber-500/35">Literal</span>
+              <span id="qDiffBadge" class="hidden sm:inline-block px-2.5 py-1 rounded-lg text-xs font-medium bg-slate-100 dark:bg-obsidian text-slate-600 dark:text-slate-300">Mudah</span>
+            </div>
+          </div>
+
+          <button id="flagBtn" onclick="toggleFlagCurrent()" class="px-3.5 py-2 rounded-xl text-xs font-bold border border-pink-400/50 bg-pink-500/10 text-pink-600 dark:text-pink-300 hover:bg-pink-500/20 transition flex items-center gap-2">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 21v-4m0 0V5a2 2 0 012-2h6.5l1 1H21l-3 6 3 6h-8.5l-1-1H5a2 2 0 00-2 2zm9-13.5V9"/></svg>
+            <span id="flagBtnText" data-i18n="btnFlag">Tandai Ragu-Ragu</span>
+          </button>
+        </div>
+
+        <!-- Stimulus Narrative Text / Comic Strip Card -->
+        <div id="stimulusContainer" class="bg-white dark:bg-velvetDark border-l-4 border-l-amber-400 border border-pink-300/40 dark:border-velvetBorder rounded-2xl p-5 sm:p-6 shadow-md">
+          <div class="flex flex-wrap items-center justify-between gap-2 mb-3 pb-2 border-b border-slate-200 dark:border-velvetBorder">
+            <span id="stimulusTitle" class="text-xs font-mono font-bold uppercase tracking-wider text-amber-600 dark:text-amber-400">NARRATIVE STIMULUS</span>
+            <span id="stimulusPancaBadge" class="text-[11px] font-semibold px-2.5 py-0.5 rounded-full bg-pink-500/15 text-pink-600 dark:text-pink-300">Panca Cinta</span>
+          </div>
+          <div id="stimulusBody" class="text-sm sm:text-base text-slate-800 dark:text-slate-100 leading-relaxed space-y-3"></div>
+        </div>
+
+        <!-- Question Stem & 4 Options Card -->
+        <div class="bg-white dark:bg-velvetDark border border-pink-300/40 dark:border-velvetBorder rounded-2xl p-5 sm:p-6 shadow-md space-y-5">
+          <p id="questionStem" class="text-base sm:text-lg font-bold text-slate-900 dark:text-white leading-snug"></p>
+
+          <div id="optionsContainer" class="space-y-3">
+            <!-- Dynamically injected options A, B, C, D -->
+          </div>
+        </div>
+
+        <!-- Bottom Prev / Next Controls -->
+        <div class="flex items-center justify-between gap-3 pt-2 pb-8">
+          <button id="prevQBtn" onclick="navigateQuestion(-1)" class="px-5 py-3 rounded-xl text-xs sm:text-sm font-bold border border-slate-300 dark:border-velvetBorder bg-white dark:bg-velvetDark hover:border-pink-500 transition flex items-center gap-2 disabled:opacity-40">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+            <span data-i18n="btnPrev">Sebelumnya</span>
+          </button>
+
+          <button id="nextQBtn" onclick="navigateQuestion(1)" class="pink-btn px-6 py-3 rounded-xl text-xs sm:text-sm uppercase tracking-wider flex items-center gap-2">
+            <span data-i18n="btnNext">Soal Berikutnya</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- =================================================================== -->
+      <!-- RESULTS, LITERACY ANALYTICS & CERTIFICATE VIEW (AFTER SUBMISSION)   -->
+      <!-- =================================================================== -->
+      <div id="resultsStage" class="hidden flex-1 p-4 sm:p-6 lg:p-8 max-w-5xl w-full mx-auto space-y-8 pb-16">
+        
+        <!-- Score Hero Banner -->
+        <div class="bg-white dark:bg-velvetDark border border-amber-400/50 rounded-3xl p-6 sm:p-8 shadow-xl relative overflow-hidden">
+          <div class="absolute top-0 right-0 w-64 h-64 bg-pink-500/15 rounded-full blur-3xl pointer-events-none"></div>
+          <div class="flex flex-col md:flex-row items-center justify-between gap-6 relative z-10">
+            <div class="space-y-2 text-center md:text-left">
+              <span class="px-3 py-1 rounded-full text-xs font-mono font-bold bg-pink-500/15 text-pink-600 dark:text-pink-300 border border-pink-500/35" data-i18n="resBadge">LAPORAN HASIL ASESMEN LITERASI MEMBACA</span>
+              <h2 id="resStudentName" class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white">-</h2>
+              <p id="resStudentMeta" class="text-xs sm:text-sm text-slate-600 dark:text-pink-200/80">-</p>
+              <div class="pt-2 flex flex-wrap justify-center md:justify-start gap-2">
+                <span id="resCategoryBadge" class="px-3.5 py-1.5 rounded-xl text-xs font-extrabold uppercase tracking-wider"></span>
+                <span id="resTimeTakenBadge" class="px-3.5 py-1.5 rounded-xl text-xs font-mono font-semibold bg-slate-100 dark:bg-obsidian text-slate-600 dark:text-slate-300 border border-slate-300 dark:border-velvetBorder"></span>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-5">
+              <div class="text-center p-5 rounded-3xl bg-gradient-to-br from-velvetDark to-obsidian border-2 border-amber-400 shadow-lg min-w-[156px]">
+                <span class="block text-[11px] font-bold uppercase tracking-widest text-amber-400" data-i18n="finalScoreLbl">NILAI AKHIR</span>
+                <span id="resFinalScore" class="block text-5xl font-black text-white my-1 font-mono">0</span>
+                <span id="resCorrectCount" class="text-xs text-pink-300 font-semibold">0 / 50 Benar</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CERTIFICATE SECTION (UNLOCKED IF SCORE >= 80) -->
+        <div id="certificateUnlockedSection" class="hidden space-y-4">
+          <div class="flex flex-wrap items-center justify-between gap-3">
+            <div>
+              <h3 class="text-lg sm:text-xl font-extrabold text-amber-600 dark:text-amber-400 flex items-center gap-2">
+                <svg class="w-6 h-6 text-pink-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
+                <span data-i18n="certHeading">Sertifikat Kelulusan Digital (Skor ≥ 80)</span>
+              </h3>
+              <p class="text-xs text-slate-500 dark:text-pink-200/75" data-i18n="certSub">Selamat! Anda memenuhi standar ketuntasan minimal 80 untuk memperoleh sertifikat resmi.</p>
+            </div>
+            <div class="flex items-center gap-2.5">
+              <button onclick="downloadCertificatePNG()" class="pink-btn px-4 py-2.5 rounded-xl text-xs flex items-center gap-2">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                <span>Download PNG</span>
+              </button>
+              <button onclick="window.print()" class="gold-btn px-4 py-2.5 rounded-xl text-xs flex items-center gap-2">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"/></svg>
+                <span>Cetak / PDF</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Printable Golden-Pink Certificate Frame -->
+          <div id="certificatePrintArea" class="cert-gold-pink-frame rounded-2xl p-6 sm:p-12 text-center text-white relative overflow-hidden">
+            <div class="border border-pink-400/35 rounded-xl p-6 sm:p-10 relative">
+              <div class="flex items-center justify-between text-[10px] sm:text-xs font-mono text-pink-200 mb-4">
+                <span>ID: <span id="certSerialId" class="text-amber-400">ASAS-NAR-2026-XXXX</span></span>
+                <span>FASE D • KELAS VIII MTs/SMP</span>
+              </div>
+
+              <div class="w-14 h-14 mx-auto mb-3 rounded-full bg-gradient-to-br from-amber-400/20 to-pink-500/20 border border-amber-400 flex items-center justify-center">
+                <svg class="w-8 h-8 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
+              </div>
+
+              <h4 class="font-serif text-2xl sm:text-4xl font-bold tracking-wide text-amber-400 uppercase">Certificate of Achievement</h4>
+              <p class="text-xs sm:text-sm uppercase tracking-[0.25em] text-pink-300 mt-1 mb-6">Sertifikat Capaian Literasi Membaca Narrative Text</p>
+
+              <p class="text-xs sm:text-sm text-slate-300">Diberikan dengan bangga kepada / Proudly presented to:</p>
+              <h3 id="certStudentName" class="font-serif text-2xl sm:text-4xl font-bold text-white my-3 border-b border-amber-400/50 inline-block px-8 pb-2">-</h3>
+              
+              <p id="certStudentDetails" class="text-xs sm:text-sm text-pink-200 font-medium mb-5">
+                Kelas: - • Nomor Presensi: - • Asal Madrasah: -
+              </p>
+
+              <p class="text-xs sm:text-sm text-slate-200 max-w-2xl mx-auto leading-relaxed mb-6">
+                Telah menyelesaikan <strong>Paket Asesmen Sumatif Literasi Membaca: Narrative Text, Bahasa Inggris Kelas VIII (Fase D)</strong> (10 Teks Narasi Orisinal & Penguatan Nilai Panca Cinta) dengan predikat <strong id="certPredicate" class="text-amber-400">SANGAT BAIK</strong> dan perolehan skor akhir:
+              </p>
+
+              <div class="inline-flex items-center gap-4 px-8 py-3 rounded-2xl bg-obsidian/95 border border-amber-400/80 mb-8">
+                <span class="text-xs uppercase tracking-widest text-pink-300">SKOR AKHIR</span>
+                <span id="certScoreValue" class="font-mono text-3xl sm:text-4xl font-black text-amber-400">85 / 100</span>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4 border-t border-pink-500/30 text-xs">
+                <div class="text-center sm:text-left">
+                  <p class="text-slate-400">Tanggal Penerbitan / Issued Date:</p>
+                  <p id="certDateText" class="font-bold text-white mt-1">-</p>
+                  <p class="text-[11px] text-pink-400 mt-1">Verified by ASAS Enterprise Proctoring System</p>
+                </div>
+                <div class="text-center sm:text-right">
+                  <p class="text-slate-400">Pengembang & Pembuat Aplikasi,</p>
+                  <p class="font-serif italic text-lg text-amber-400 mt-2">Ahmad Budi Leksono</p>
+                  <p class="font-bold text-white underline decoration-pink-500 mt-1">Ahmad Budi Leksono</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CERTIFICATE LOCKED NOTICE (IF SCORE < 80) -->
+        <div id="certificateLockedSection" class="hidden bg-white dark:bg-velvetDark border border-pink-500/45 rounded-3xl p-6 text-center space-y-3">
+          <div class="w-12 h-12 mx-auto rounded-2xl bg-pink-500/15 text-pink-500 flex items-center justify-center">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+          </div>
+          <h3 class="text-lg font-extrabold text-slate-900 dark:text-white">Sertifikat Belum Terbuka (Minimal Skor 80)</h3>
+          <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 max-w-xl mx-auto">
+            Skor Anda saat ini belum mencapai batas kelulusan sertifikat minimal <strong>80</strong>. Pelajari pembahasan lengkap di bawah ini, lalu klik <strong>Menu Identitas Murid</strong> untuk mencoba kembali.
+          </p>
+        </div>
+
+        <!-- DIAGNOSTIC ANALYTICS: 4 READING LITERACY ASPECTS & 10 NARRATIVE GENRES -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="bg-white dark:bg-velvetDark border border-pink-300/40 dark:border-velvetBorder rounded-3xl p-6 space-y-4">
+            <h3 class="text-base font-extrabold text-slate-900 dark:text-white flex items-center gap-2">
+              <span class="w-2.5 h-2.5 rounded-full bg-amber-400"></span>
+              Analisis Aspek Literasi Membaca
+            </h3>
+            <div id="aspectBreakdownList" class="space-y-3"></div>
+          </div>
+
+          <div class="bg-white dark:bg-velvetDark border border-pink-300/40 dark:border-velvetBorder rounded-3xl p-6 space-y-4">
+            <h3 class="text-base font-extrabold text-slate-900 dark:text-white flex items-center gap-2">
+              <span class="w-2.5 h-2.5 rounded-full bg-pink-500"></span>
+              Capaian Per Teks Narasi (Text 1 – Text 10)
+            </h3>
+            <div id="textBreakdownList" class="space-y-2.5 max-h-72 overflow-y-auto pr-1"></div>
+          </div>
+        </div>
+
+        <!-- FULL ANSWER KEY & PEMBAHASAN REVIEW -->
+        <div class="bg-white dark:bg-velvetDark border border-pink-300/40 dark:border-velvetBorder rounded-3xl p-6 space-y-4">
+          <div class="flex flex-wrap items-center justify-between gap-2 pb-3 border-b border-slate-200 dark:border-velvetBorder">
+            <h3 class="text-lg font-extrabold text-slate-900 dark:text-white">Kunci Jawaban & Pembahasan Lengkap (50 Butir)</h3>
+            <button onclick="openIdentityMenu()" class="gold-btn px-4 py-2 rounded-xl text-xs">Ulangi / Peserta Baru</button>
+          </div>
+          <div id="reviewQuestionsList" class="space-y-4"></div>
+        </div>
+      </div>
+    </main>
+
+    <!-- RIGHT SIDEBAR: MENU NAVIGASI SOAL (1 - 50) -->
+    <aside id="questionNavDrawer" class="fixed inset-y-0 right-0 z-50 w-80 bg-white/95 dark:bg-velvetDark/95 glass-panel border-l border-pink-300/40 dark:border-velvetBorder transform translate-x-full xl:translate-x-0 xl:static xl:flex xl:flex-col justify-between transition-transform duration-300 overflow-y-auto">
+      <div class="p-5 space-y-4">
+        <div class="flex items-center justify-between border-b border-slate-200 dark:border-velvetBorder pb-3">
+          <div>
+            <h3 class="text-sm font-extrabold text-slate-900 dark:text-white uppercase tracking-wider" data-i18n="navGridTitle">Menu Navigasi Soal</h3>
+            <p class="text-[11px] text-slate-500 dark:text-pink-200/70">Klik nomor untuk berpindah cepat</p>
+          </div>
+          <button onclick="toggleMobileNavDrawer()" class="xl:hidden p-1.5 rounded-lg text-slate-400 hover:text-white">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+          </button>
+        </div>
+
+        <!-- Legend -->
+        <div class="grid grid-cols-2 gap-2 text-[11px] text-slate-600 dark:text-slate-300 bg-slate-100 dark:bg-obsidian/80 p-3 rounded-xl border border-slate-200 dark:border-velvetBorder">
+          <div class="flex items-center gap-2"><span class="w-3 h-3 rounded bg-amber-400 inline-block"></span> <span data-i18n="legAnswered">Sudah Dijawab</span></div>
+          <div class="flex items-center gap-2"><span class="w-3 h-3 rounded bg-pink-500 inline-block"></span> <span data-i18n="legFlagged">Ragu-Ragu</span></div>
+          <div class="flex items-center gap-2"><span class="w-3 h-3 rounded border-2 border-amber-400 bg-velvetDark inline-block"></span> <span data-i18n="legCurrent">Aktif</span></div>
+          <div class="flex items-center gap-2"><span class="w-3 h-3 rounded bg-slate-200 dark:bg-obsidian border border-slate-400/40 inline-block"></span> <span data-i18n="legEmpty">Belum Dijawab</span></div>
+        </div>
+
+        <!-- 50 Number Grid -->
+        <div id="questionNumberGrid" class="grid grid-cols-5 gap-2 pt-1">
+          <!-- Buttons 1..50 injected dynamically -->
+        </div>
+      </div>
+
+      <div class="p-5 border-t border-slate-200 dark:border-velvetBorder text-center">
+        <p class="text-[11px] text-slate-500 dark:text-pink-200/70" data-i18n="navTip">Pastikan seluruh 50 soal telah terjawab sebelum batas waktu 80 menit berakhir.</p>
+      </div>
+    </aside>
+  </div>
+
+  <!-- Hidden Canvas for High-Res PNG Certificate Export -->
+  <canvas id="certExportCanvas" width="1400" height="990" class="hidden"></canvas>
+
+  <script>
+    // =========================================================================
+    // 1. COMPLETE DATASET: ALL 10 NARRATIVE STIMULI & 50 QUESTIONS
+    // =========================================================================
+    const STIMULUS_DATA = {
+      T1: {
+        title: "Text 1: The Heron and the Shrinking Pond (Questions 1 – 5)",
+        genre: "Fable",
+        panca: "Cinta Lingkungan, Cinta Sesama",
+        html: `<div class="space-y-2.5">
+                 <p>In a quiet forest, a pond was home to frogs, fish, and a proud heron named Hana. Every morning, Hana stood on one leg at the edge of the water and said, 'This pond is mine. I do not need to share it with anyone.'</p>
+                 <p>One dry season, the rain did not come for many weeks. The pond became smaller each day. The frogs asked Hana, 'Could we dig a small channel to bring water from the river?' Hana laughed. 'Digging is for creatures with nothing better to do. I will simply wait for the rain.'</p>
+                 <p>The frogs and the fish worked together anyway. They carried mud and stones and dug a narrow channel toward the river. Hana watched from a branch, feeling a little ashamed but saying nothing.</p>
+                 <p>When the channel was finished, fresh water flowed into the pond. The frogs sang, the fish danced, and the pond grew full again. That evening, Hana lowered her head and said quietly, 'Thank you. I was wrong. May I help you clean the channel tomorrow?'</p>
+                 <p>From that day, the heron guarded the channel and kept it free of fallen leaves.</p>
+               </div>`
+      },
+      T2: {
+        title: "Text 2: The Green Lake of Banyu Hijau (Questions 6 – 10)",
+        genre: "Legend",
+        panca: "Cinta Lingkungan, Cinta Tanah Air",
+        html: `<div class="space-y-2.5">
+                 <p>Long ago, a village near a mountain had no water. The people walked for hours each day to reach a faraway spring. A kind young woman named Laras decided to climb the mountain to find the source of the spring. Before she left, her grandmother gave her a small clay jar and said, 'Water is a gift. Use it with a clean heart, and it will never leave you.'</p>
+                 <p>At the top, Laras found a guardian spirit sitting beside a dry crater. The spirit said, 'The mountain will give water to anyone who gives up the thing she values most.' Laras thought of her silver necklace, the only keepsake from her mother. She sighed, dropped the necklace into the crater, and said, 'Take it, if my village can live.'</p>
+                 <p>At once, water bubbled up from the crater. It rose and rose until it formed a wide lake that shone green like the leaves around it. The spirit said, 'The lake will stay as long as people care for it.' Laras returned home, and from that day the villagers called the lake Banyu Hijau, which means 'green water'. They never threw trash into it, and they planted trees around its shore.</p>
+               </div>`
+      },
+      T3: {
+        title: "Text 3: The Burnt Porridge (Questions 11 – 15)",
+        genre: "Slice of life",
+        panca: "Cinta Diri dan Sesama",
+        html: `<div class="space-y-2.5">
+                 <p>On Saturday morning, twelve-year-old Salma wanted to surprise her mother, who had been sick for two days. She decided to cook rice porridge by herself. She poured rice and water into a pot and turned on the stove. Then her phone buzzed with a message from a friend, and she sat down to reply.</p>
+                 <p>A few minutes later, she smelled something strange. The porridge was burnt at the bottom of the pot! Salma's eyes filled with tears. Her mother came into the kitchen and sniffed the air.</p>
+                 <p>'Salma, what is this smell?'</p>
+                 <p>'I'm sorry, Mom,' Salma said quietly. 'I wanted to cook for you, but I forgot to watch the stove.'</p>
+                 <p>Her mother smiled and held Salma's hand. 'Thank you for trying. The top part isn't burnt. Let's save it and make a new pot together. This time, you stir and I'll sit beside you.'</p>
+                 <p>They cooked together, laughing at the mistake. When the porridge was ready, Salma's mother said, 'It's the most delicious porridge I've ever eaten, because it was made with love.'</p>
+               </div>`
+      },
+      T4: {
+        title: "Text 4: The Shared Umbrella — 4-Panel Comic Strip (Questions 16 – 20)",
+        genre: "Comic strip",
+        panca: "Cinta Sesama",
+        html: `<div class="overflow-x-auto">
+                 <table class="w-full text-xs sm:text-sm border-collapse border border-pink-500/40">
+                   <thead>
+                     <tr class="bg-gradient-to-r from-amber-500/20 to-pink-500/20 text-left">
+                       <th class="border border-pink-500/40 p-2.5 w-16 text-center">Panel</th>
+                       <th class="border border-pink-500/40 p-2.5">Picture Scene</th>
+                       <th class="border border-pink-500/40 p-2.5">Words / Dialogue</th>
+                     </tr>
+                   </thead>
+                   <tbody>
+                     <tr>
+                       <td class="border border-pink-500/40 p-2.5 font-mono font-bold text-center text-amber-500">1</td>
+                       <td class="border border-pink-500/40 p-2.5">Dark clouds hang over a school gate. Dito looks at the sky. He holds no umbrella, and many students are leaving.</td>
+                       <td class="border border-pink-500/40 p-2.5 italic">Dito: "Oh no. It's going to pour."</td>
+                     </tr>
+                     <tr>
+                       <td class="border border-pink-500/40 p-2.5 font-mono font-bold text-center text-amber-500">2</td>
+                       <td class="border border-pink-500/40 p-2.5">Lani, who has a large umbrella, stops beside him.</td>
+                       <td class="border border-pink-500/40 p-2.5 italic">Lani: "Dito, we live in the same direction. Let's share."</td>
+                     </tr>
+                     <tr>
+                       <td class="border border-pink-500/40 p-2.5 font-mono font-bold text-center text-amber-500">3</td>
+                       <td class="border border-pink-500/40 p-2.5">Under the umbrella, Lani's left shoulder is wet while Dito's shoulder is dry. Dito notices it.</td>
+                       <td class="border border-pink-500/40 p-2.5 italic">Dito: "Your shoulder is soaked, Lani! Let me hold the umbrella."</td>
+                     </tr>
+                     <tr>
+                       <td class="border border-pink-500/40 p-2.5 font-mono font-bold text-center text-amber-500">4</td>
+                       <td class="border border-pink-500/40 p-2.5">Dito holds the umbrella and tilts it toward Lani. Both smile as they pass a puddle.</td>
+                       <td class="border border-pink-500/40 p-2.5 italic">Lani: "Thanks. Now we're both half dry!"<br/>Dito: "Half dry is better than all wet."</td>
+                     </tr>
+                   </tbody>
+                 </table>
+               </div>`
+      },
+      T5: {
+        title: "Text 5: The Garden on Kepler Station (Questions 21 – 25)",
+        genre: "Science fiction",
+        panca: "Cinta Lingkungan, Cinta Ilmu",
+        html: `<div class="space-y-2.5">
+                 <p>In the year 2140, fourteen-year-old Tari lived aboard Kepler Orbital Station, a metallic ring floating high above Earth. Every vegetable the crew ate arrived in sealed freeze-dried packets. Missing the smell of real soil, Tari built a small hydroponic planter in Module B using recycled aluminum trays, LED grow-lamps, and a packet of mung bean seeds her grandfather had sent from Java.</p>
+                 <p>At first, Commander Raka thought the tiny garden was a waste of precious station water. 'We only need nutrient paste to survive, Tari,' he said. Tari replied calmly, 'Plants do not just feed our stomachs, Commander. They clean the cabin air and remind us what Earth feels like.'</p>
+                 <p>Two weeks later, bright green sprouts filled the trays. When an air-filter malfunction caused stale air in Module B, sensors showed that Tari's green corner kept oxygen levels noticeably fresher. Commander Raka smiled, approved two more planter racks, and wrote in the station log: 'Even among the stars, green life keeps us human.'</p>
+               </div>`
+      },
+      T6: {
+        title: "Text 6: The Missing Library Key (Questions 26 – 30)",
+        genre: "Mystery",
+        panca: "Cinta Ilmu, Cinta Diri",
+        html: `<div class="space-y-2.5">
+                 <p>Every Friday afternoon, Nadya helped Mrs. Ratna lock the school library. On this particular Friday, the brass key was missing from its hook behind the circulation desk. Nadya checked the floor, the bookshelves, and even the trash bin, but found nothing.</p>
+                 <p>Instead of panicking, Nadya looked closely at the desk. Beside the logbook lay a trail of blue chalk dust leading toward the reading corner, where a stack of thick science encyclopedias sat slightly crooked. Carefully lifting the top encyclopedia, Nadya spotted a shiny brass ring peeking out between pages 210 and 211.</p>
+                 <p>Earlier that afternoon, Benny—who had been erasing the whiteboard before visiting the library—had used the key as a temporary bookmark when the bell rang for afternoon prayer. Nadya returned the key to Mrs. Ratna and gently reminded Benny to use a paper bookmark next time rather than scolding him in front of everyone.</p>
+               </div>`
+      },
+      T7: {
+        title: "Text 7: The Ant and Prophet Sulaiman (Questions 31 – 35)",
+        genre: "Kisah nabi",
+        panca: "Cinta Allah dan Rasul-Nya",
+        html: `<div class="space-y-2.5">
+                 <p>Long ago, Prophet Sulaiman (peace be upon him), whom Allah blessed with the ability to understand the speech of animals, marched with his great army of humans, jinn, and birds through a wide valley. As the footsteps of the vast army echoed across the ground, a small queen ant noticed the approaching march.</p>
+                 <p>Concerned for the safety of her colony, she called out loudly, 'O ants, enter your dwellings so that Sulaiman and his soldiers do not crush you while they do not perceive it!'</p>
+                 <p>Hearing her warning from afar, Prophet Sulaiman smiled with deep gratitude to Allah. He immediately ordered his entire army to halt and change their path around the valley until every ant was safely inside its home. Then he raised his hands in prayer, thanking Allah for His wisdom and for allowing him to show mercy even to the smallest of creatures.</p>
+               </div>`
+      },
+      T8: {
+        title: "Text 8: The Tailor and the Moon's Thread (Questions 36 – 40)",
+        genre: "Fairy tale",
+        panca: "Cinta Sesama",
+        html: `<div class="space-y-2.5">
+                 <p>In a hillside town lived an old tailor named Pak Darma, who mended torn coats for poor villagers without charging a single coin. One winter night, a silver owl landed on his windowsill and left a spool of glowing thread spun from moonlight. 'Any garment sewn with this thread will never wear out and will keep its wearer warm in the coldest storm,' the owl whispered. 'However, you must never sell it for gold.'</p>
+                 <p>Soon, a wealthy merchant heard about the magical thread and offered Pak Darma a chest full of gold coins to sew him a royal cloak. Pak Darma politely shook his head and refused. Instead, he spent the night stitching warm wool scarves for the town's orphans and elderly neighbors.</p>
+                 <p>When morning came, the spool had not shrunk at all; in fact, it shone even brighter. True magic, the villagers realized, multiplies whenever it is shared with a generous heart.</p>
+               </div>`
+      },
+      T9: {
+        title: "Text 9: Bu Wati's Rice Dumplings (Questions 41 – 45)",
+        genre: "Inspirational",
+        panca: "Cinta Diri dan Sesama",
+        html: `<div class="space-y-2.5">
+                 <p>Every morning before dawn, Bu Wati steamed traditional rice dumplings (lontong isi) to sell at the market gate so she could pay for her son Farhan's schoolbooks. One rainy Tuesday, a sudden street closure blocked regular commuters, and by nine o'clock more than half of her basket remained unsold. Bu Wati stared at the steaming dumplings, worried she would not have enough money for Farhan's geometry set.</p>
+                 <p>Seeing his mother's quiet sigh, Farhan did not complain. Instead, he borrowed a clean thermos from their neighbor, packed the warm dumplings neatly into banana-leaf boxes, and walked with his mother to the nearby construction site where workers were taking their morning break.</p>
+                 <p>Within twenty minutes, every single dumpling was sold out, and the workers asked Bu Wati to come back the next day. That afternoon, Bu Wati hugged Farhan and said, 'When one door closes, patience and effort open a wider window.'</p>
+               </div>`
+      },
+      T10: {
+        title: "Text 10: The Whispering Barn (Questions 46 – 50)",
+        genre: "Adventure",
+        panca: "Cinta Ilmu, Cinta Sesama",
+        html: `<div class="space-y-2.5">
+                 <p>During a weekend scouting camp near their grandfather's farm, cousins Arman and Nisa heard a strange, rhythmic whispering coming from the old wooden barn after sunset. Some younger campers refused to go near it, claiming the barn was haunted.</p>
+                 <p>Instead of spreading rumors, Arman and Nisa grabbed a flashlight and approached the barn door carefully. Inside, they noticed that the wind was blowing through a cracked loft window, vibrating a loose tin weathervane against a hollow bamboo pipe—creating an eerie whistling whisper. Even more importantly, they found a frightened stray kitten trapped behind stacked hay bales.</p>
+                 <p>They rescued the kitten, fed it warm milk, and fastened the loose tin plate with wire. The next morning, Nisa explained the science of wind vibration to the younger campers, turning a scary rumor into a memorable lesson.</p>
+               </div>`
+      }
+    };
+
+    const ASPECT_NAMES = {
+      Literal: "Literal (Menemukan Informasi Tersurat)",
+      Inferensial: "Inferensial (Menyimpulkan Informasi Tersirat)",
+      Interpretasi: "Interpretasi (Menafsirkan Makna & Moral)",
+      Evaluasi: "Evaluasi (Menilai Keputusan & Tindakan)"
+    };
+
+    const TEXT_TITLES_SHORT = {
+      T1: "Text 1 • The Heron and the Shrinking Pond (Fable)",
+      T2: "Text 2 • The Green Lake of Banyu Hijau (Legend)",
+      T3: "Text 3 • The Burnt Porridge (Slice of Life)",
+      T4: "Text 4 • The Shared Umbrella (Comic Strip)",
+      T5: "Text 5 • The Garden on Kepler Station (Sci-Fi)",
+      T6: "Text 6 • The Missing Library Key (Mystery)",
+      T7: "Text 7 • The Ant and Prophet Sulaiman (Islamic Story)",
+      T8: "Text 8 • The Tailor and the Moon's Thread (Fairy Tale)",
+      T9: "Text 9 • Bu Wati's Rice Dumplings (Inspirational)",
+      T10: "Text 10 • The Whispering Barn (Adventure)"
+    };
+
+    // Complete 50 Questions: Items 1–20 exact from attached document, Items 21–50 matching blueprint Texts 5–10
+    const RAW_QUESTIONS = [
+      // TEXT 1 (1–5)
+      { id: 1, stim: "T1", genre: "Fable", aspect: "Literal", diff: "Mudah", q: "What did Hana say every morning?", opts: ["That she wanted to share the pond with the frogs", "That the frogs should leave the forest", "That the pond belonged to her and she did not need to share it", "That she was waiting for her family"], ans: 2, exp: "Pada paragraf pertama tertulis jelas ucapan Hana setiap pagi: 'This pond is mine. I do not need to share it with anyone.'" },
+      { id: 2, stim: "T1", genre: "Fable", aspect: "Literal", diff: "Mudah", q: "What did the frogs and the fish do when the pond became smaller?", opts: ["They moved to another forest.", "They dug a channel toward the river.", "They asked Hana to catch the rain.", "They waited quietly for the rain."], ans: 1, exp: "Katak dan ikan bekerja sama menggali saluran kecil menuju sungai ('dug a narrow channel toward the river') untuk mengalirkan air segar." },
+      { id: 3, stim: "T1", genre: "Fable", aspect: "Inferensial", diff: "Sedang", q: "Why did Hana feel a little ashamed while watching the other animals work?", opts: ["She was afraid of the river.", "She was tired from standing on one leg.", "She wanted the water only for herself.", "She saw others solving the problem that she had laughed at."], ans: 3, exp: "Hana sebelumnya menertawakan ide menggali saluran, namun ternyata katak dan ikan benar-benar bekerja keras menyelesaikan masalah bersama." },
+      { id: 4, stim: "T1", genre: "Fable", aspect: "Interpretasi", diff: "Sedang", q: "What does the ending, in which the heron guards the channel, suggest about Hana?", opts: ["She changed from selfish to cooperative.", "She still wanted the pond to herself.", "She planned to leave the pond.", "The other animals punished her."], ans: 0, exp: "Tindakan Hana meminta maaf dan menjaga saluran agar bebas dari daun gugur menunjukkan perubahan wataknya dari egois menjadi kooperatif." },
+      { id: 5, stim: "T1", genre: "Fable", aspect: "Evaluasi", diff: "Sedang", q: "Which statement is the best evaluation of the animals' decision to dig the channel even though Hana laughed?", opts: ["It was foolish because the rain would have come anyway.", "It was wise because working together solved a problem that affected everyone.", "It was unfair because Hana should have done all the work.", "It was unnecessary because the river was dry."], ans: 1, exp: "Keputusan katak dan ikan sangat bijaksana karena gotong royong mampu mengatasi kekeringan yang berdampak bagi seluruh penghuni kolam." },
+
+      // TEXT 2 (6–10)
+      { id: 6, stim: "T2", genre: "Legend", aspect: "Literal", diff: "Mudah", q: "Why did Laras climb the mountain?", opts: ["To find the source of water for her village", "To visit her grandmother", "To play with the guardian spirit", "To collect silver"], ans: 0, exp: "Laras mendaki gunung untuk mencari sumber mata air bagi desanya yang mengalami kekeringan." },
+      { id: 7, stim: "T2", genre: "Legend", aspect: "Literal", diff: "Mudah", q: "What did Laras give up at the crater?", opts: ["Her clay jar", "Her house", "Her grandmother's ring", "Her silver necklace"], ans: 3, exp: "Laras merelakan kalung peraknya ('silver necklace'), satu-satunya kenang-kenangan dari ibunya, ke dalam kawah." },
+      { id: 8, stim: "T2", genre: "Legend", aspect: "Inferensial", diff: "Sedang", q: "Why did Laras sigh before dropping the necklace into the crater?", opts: ["She was angry with the spirit.", "She was tired from the climb.", "The necklace was a precious keepsake from her mother.", "She wanted to keep the water for herself."], ans: 2, exp: "Kalung perak itu adalah satu-satunya kenang-kenangan berharga dari ibunya sehingga melepaskannya membutuhkan pengorbanan batin." },
+      { id: 9, stim: "T2", genre: "Legend", aspect: "Interpretasi", diff: "Sedang", q: "What does the spirit mean by 'The lake will stay as long as people care for it'?", opts: ["The lake will disappear whenever the spirit wants.", "The villagers must protect the lake for it to last.", "The lake will grow bigger even if no one cares for it.", "Only Laras may touch the water."], ans: 1, exp: "Pesan penjaga danau bermakna kelestarian air bergantung pada kepedulian warga untuk menjaga kebersihan dan kelestarian lingkungan danau." },
+      { id: 10, stim: "T2", genre: "Legend", aspect: "Evaluasi", diff: "Sedang", q: "Which action of the villagers best shows that they understood the spirit's message?", opts: ["They sold the water to travelers.", "They built houses on the shore.", "They stopped visiting the lake.", "They kept the lake clean and planted trees around it."], ans: 3, exp: "Warga tidak membuang sampah ke danau dan menanam pohon di tepinya sebagai wujud nyata menjaga kelestarian alam." },
+
+      // TEXT 3 (11–15)
+      { id: 11, stim: "T3", genre: "Slice of life", aspect: "Literal", diff: "Mudah", q: "Why did Salma cook porridge?", opts: ["She was hungry.", "She wanted to surprise her sick mother.", "Her mother asked her to cook.", "She was practicing for a contest."], ans: 1, exp: "Salma ingin memberi kejutan hangat untuk ibunya yang sudah dua hari sakit." },
+      { id: 12, stim: "T3", genre: "Slice of life", aspect: "Literal", diff: "Mudah", q: "What caused the porridge to burn?", opts: ["The stove was broken.", "Salma used too little water.", "Salma forgot to watch the stove while she replied to a message.", "Her mother turned up the heat."], ans: 2, exp: "Salma duduk membalas pesan ponsel dari temannya sehingga lupa mengawasi kompor." },
+      { id: 13, stim: "T3", genre: "Slice of life", aspect: "Inferensial", diff: "Sedang", q: "What does her mother's reaction suggest?", opts: ["She values Salma's effort more than the mistake.", "She is angry but hides it.", "She dislikes porridge.", "She wants Salma to stop cooking."], ans: 0, exp: "Ibu Salma tersenyum, menggenggam tangannya, dan berterima kasih karena lebih menghargai ketulusan usaha anaknya daripada kesalahannya." },
+      { id: 14, stim: "T3", genre: "Slice of life", aspect: "Interpretasi", diff: "Sedang", q: "What does 'it was made with love' mean?", opts: ["The recipe was very complicated.", "The porridge had special ingredients.", "The porridge was cooked by an expert.", "The care and effort behind the cooking made it special."], ans: 3, exp: "Ungkapan kiasan 'made with love' berarti rasa kasih sayang dan ketulusan di balik masakan itulah yang membuatnya terasa sangat istimewa." },
+      { id: 15, stim: "T3", genre: "Slice of life", aspect: "Evaluasi", diff: "Sedang", q: "Which statement is the best evaluation of how Salma's mother handled the mistake?", opts: ["She should have punished Salma.", "She should have cooked alone to avoid more mistakes.", "She handled it well because she encouraged Salma and helped her learn.", "She handled it badly because she ignored the burnt smell."], ans: 2, exp: "Ibu Salma menangani kesalahan dengan sangat bijak: menenangkan anaknya, menyelamatkan bagian yang tidak gosong, lalu membimbing memasak bersama." },
+
+      // TEXT 4 (16–20)
+      { id: 16, stim: "T4", genre: "Comic strip", aspect: "Literal", diff: "Mudah", q: "What problem does Dito have in panel 1?", opts: ["He lost his bag.", "He is late for class.", "He is lost.", "He has no umbrella and it is about to rain."], ans: 3, exp: "Pada panel 1 terlihat awan mendung gelap dan Dito tidak membawa payung saat hujan hendak turun." },
+      { id: 17, stim: "T4", genre: "Comic strip", aspect: "Literal", diff: "Mudah", q: "Who offers to share the umbrella?", opts: ["Lani", "Dito", "A teacher", "A security guard"], ans: 0, exp: "Pada panel 2, Lani berhenti di samping Dito dan menawarkan berbagi payung besarnya." },
+      { id: 18, stim: "T4", genre: "Comic strip", aspect: "Inferensial", diff: "Sedang", q: "What can be inferred about Lani from panel 3?", opts: ["She dislikes the rain.", "She cares more about Dito staying dry than about herself.", "She is angry with Dito.", "She forgot her umbrella."], ans: 1, exp: "Bahu kiri Lani basah sementara bahu Dito kering, menunjukkan Lani lebih memprioritaskan agar Dito terlindung dari hujan." },
+      { id: 19, stim: "T4", genre: "Comic strip", aspect: "Interpretasi", diff: "Sedang", q: "What does Dito mean by 'Half dry is better than all wet'?", opts: ["They prefer being wet.", "The umbrella was broken.", "A partial solution is still better than no solution, so sharing was worth it.", "It is better to stay at school."], ans: 2, exp: "Ungkapan tersebut bermakna berbagi solusi meski hanya setengah kering jauh lebih baik daripada basah kuyup seluruhnya." },
+      { id: 20, stim: "T4", genre: "Comic strip", aspect: "Evaluasi", diff: "Sedang", q: "Which statement best evaluates how Dito and Lani solved the problem?", opts: ["They solved it well by sharing and taking care of each other.", "They solved it badly because they still got a little wet.", "Dito should have refused Lani's help.", "Lani should have walked home alone."], ans: 0, exp: "Keduanya menunjukkan empati dan saling peduli: Lani berbagi payung dan Dito bergantian memegangnya agar sama-sama terlindungi." },
+
+      // TEXT 5 (21–25)
+      { id: 21, stim: "T5", genre: "Science fiction", aspect: "Literal", diff: "Mudah", q: "What items did Tari use to build her small hydroponic planter in Module B?", opts: ["Plastic bottles, soil bags, and candles", "Recycled aluminum trays, LED grow-lamps, and mung bean seeds", "Wooden boxes, rainwater tanks, and sunflower seeds", "Glass jars, solar mirrors, and rice grains"], ans: 1, exp: "Tertulis jelas pada paragraf pertama bahwa Tari menggunakan nampan aluminium daur ulang, lampu LED, dan benih kacang hijau." },
+      { id: 22, stim: "T5", genre: "Science fiction", aspect: "Inferensial", diff: "Sedang", q: "Why did Tari consider growing real plants important aboard the space station?", opts: ["She wanted to sell vegetables to other stations.", "She needed plants to clean the air and maintain an emotional connection to Earth.", "She disliked Commander Raka's rules.", "She wanted to win a science competition."], ans: 1, exp: "Tari menjelaskan bahwa tanaman tidak hanya memberi nutrisi, tetapi juga menyegarkan udara kabin dan mengingatkan kru pada Bumi." },
+      { id: 23, stim: "T5", genre: "Science fiction", aspect: "Inferensial", diff: "Sedang", q: "What was Commander Raka's initial view of Tari's garden?", opts: ["He believed it was an unnecessary use of scarce water.", "He immediately ordered ten more planter racks.", "He thought mung beans were poisonous in space.", "He wanted to build the garden himself."], ans: 0, exp: "Awalnya Commander Raka menganggap kebun kecil itu membuang-buang air stasiun karena kru cukup makan pasta nutrisi." },
+      { id: 24, stim: "T5", genre: "Science fiction", aspect: "Interpretasi", diff: "Sedang", q: "What did Commander Raka mean by writing, 'Even among the stars, green life keeps us human'?", opts: ["Astronauts can turn into plants in space.", "Caring for living nature nurtures human well-being and spirit even in advanced technology.", "Stars cannot shine without green plants.", "Only farmers should travel to space stations."], ans: 1, exp: "Kalimat tersebut menafsirkan bahwa merawat kehidupan hijau menjaga kesehatan fisik sekaligus sisi kemanusiaan di tengah teknologi canggih." },
+      { id: 25, stim: "T5", genre: "Science fiction", aspect: "Evaluasi", diff: "Sedang", q: "Which evaluation best describes Tari's response to Commander Raka's doubt?", opts: ["She was wise because she explained calmly and proved the benefit through real results.", "She was careless because she wasted all the station's water.", "She was disrespectful because she argued loudly.", "She was impatient because she gave up after two days."], ans: 0, exp: "Tari merespons keraguan komandannya secara santun dan membuktikan manfaat ekologis kebunnya secara ilmiah." },
+
+      // TEXT 6 (26–30)
+      { id: 26, stim: "T6", genre: "Mystery", aspect: "Literal", diff: "Mudah", q: "Where did Nadya finally find the missing brass library key?", opts: ["Inside the trash bin", "On the hook behind the desk", "Between pages 210 and 211 of a science encyclopedia", "Under the whiteboard eraser"], ans: 2, exp: "Nadya menemukan kunci kuningan terselip di antara halaman 210 dan 211 ensiklopedia sains." },
+      { id: 27, stim: "T6", genre: "Mystery", aspect: "Inferensial", diff: "Sedang", q: "How did Nadya deduce that Benny had been at the reading corner?", opts: ["Benny confessed immediately when she entered.", "She followed a trail of blue chalk dust from the desk to the encyclopedias.", "Mrs. Ratna showed her a security video.", "Benny wrote his name on the key."], ans: 1, exp: "Petunjuk jejak debu kapur biru dari meja menuju sudut baca membimbing Nadya melacak posisi kunci." },
+      { id: 28, stim: "T6", genre: "Mystery", aspect: "Inferensial", diff: "Sedang", q: "What role did Nadya play in resolving the problem at the end of the story?", opts: ["She acted as a thoughtful problem-solver who protected her classmate's dignity.", "She reported Benny to the principal for punishment.", "She took the library key home.", "She refused to help Mrs. Ratna lock the room."], ans: 0, exp: "Nadya memecahkan misteri dengan teliti lalu mengingatkan Benny secara pribadi tanpa mempermalukannya di depan umum." },
+      { id: 29, stim: "T6", genre: "Mystery", aspect: "Interpretasi", diff: "Sulit", q: "What is the narrative function of the 'blue chalk dust' detail in the story?", opts: ["It serves as a physical clue that connects the whiteboard duty to the hidden key.", "It shows that the school library was dirty and neglected.", "It proves that Mrs. Ratna dropped the key.", "It distracts the reader from the real mystery."], ans: 0, exp: "Detail debu kapur biru berfungsi sebagai petunjuk logis (clue) khas cerita misteri yang menghubungkan pelaku dengan lokasi benda." },
+      { id: 30, stim: "T6", genre: "Mystery", aspect: "Evaluasi", diff: "Sulit", q: "How should we evaluate Nadya's decision to remind Benny privately rather than scolding him publicly?", opts: ["It was commendable because she corrected a mistake with empathy and respect.", "It was irresponsible because Benny needed to be embarrassed.", "It was unfair to Mrs. Ratna.", "It showed she was afraid of Benny."], ans: 0, exp: "Mengingatkan teman secara santun dan menjaga kehormatannya mencerminkan nilai Cinta Diri dan Sesama." },
+
+      // TEXT 7 (31–35)
+      { id: 31, stim: "T7", genre: "Kisah nabi", aspect: "Literal", diff: "Mudah", q: "What did the queen ant call out to her colony when she heard the army approaching?", opts: ["'Attack the soldiers before they reach the hill!'", "'O ants, enter your dwellings so that Sulaiman and his soldiers do not crush you!'", "'Gather all the food and leave the valley!'", "'Wait by the river until sunset!'"], ans: 1, exp: "Ratu semut berseru agar seluruh semut masuk ke sarangnya supaya tidak terinjak oleh pasukan Nabi Sulaiman." },
+      { id: 32, stim: "T7", genre: "Kisah nabi", aspect: "Inferensial", diff: "Sedang", q: "Why did Prophet Sulaiman order his entire army to halt and change their route?", opts: ["The road ahead was blocked by rocks.", "He wanted to protect the tiny ants from being harmed unintentionally.", "His soldiers were too tired to march.", "He could not see the valley clearly."], ans: 1, exp: "Nabi Sulaiman menghentikan dan mengalihkan rute pasukannya demi melindungi koloni semut kecil agar tidak terinjak." },
+      { id: 33, stim: "T7", genre: "Kisah nabi", aspect: "Inferensial", diff: "Sedang", q: "What does Prophet Sulaiman's smile and prayer reveal about his character?", opts: ["He was proud of his military power.", "He was humble, compassionate, and deeply grateful to Allah.", "He found the queen ant's voice amusing.", "He wanted to test his soldiers' patience."], ans: 1, exp: "Senyum syukur dan doa Nabi Sulaiman menunjukkan kerendahan hati, kasih sayang kepada makhluk Allah, dan rasa syukur." },
+      { id: 34, stim: "T7", genre: "Kisah nabi", aspect: "Interpretasi", diff: "Sulit", q: "Which moral message is best conveyed by this story?", opts: ["True greatness and leadership include mercy toward even the smallest creatures.", "Only large armies can win battles.", "Ants are stronger than humans.", "Leaders should never change their planned route."], ans: 0, exp: "Pesan moral kisah ini adalah kepemimpinan sejati disertai kasih sayang dan kepedulian bahkan terhadap makhluk terkecil." },
+      { id: 35, stim: "T7", genre: "Kisah nabi", aspect: "Evaluasi", diff: "Sulit", q: "Why is Prophet Sulaiman's action an exemplary model for students today?", opts: ["It teaches us to use knowledge and authority responsibly with kindness and gratitude.", "It shows that animals should be kept inside classrooms.", "It encourages students to avoid walking in valleys.", "It proves that power means ignoring smaller beings."], ans: 0, exp: "Teladan Nabi Sulaiman mengajarkan penggunaan ilmu dan kekuasaan secara bertanggung jawab, penuh kasih sayang, dan syukur kepada Allah." },
+
+      // TEXT 8 (36–40)
+      { id: 36, stim: "T8", genre: "Fairy tale", aspect: "Literal", diff: "Mudah", q: "What special ability did the garments sewn with the moon's thread possess?", opts: ["They could turn into gold coins.", "They would never wear out and would keep the wearer warm in any storm.", "They made the wearer invisible.", "They could fly across the mountain."], ans: 1, exp: "Pakaian yang dijahit dengan benang bulan tidak akan pernah usang dan selalu menghangatkan pemakainya di tengah badai." },
+      { id: 37, stim: "T8", genre: "Fairy tale", aspect: "Inferensial", diff: "Sedang", q: "Why did Pak Darma refuse the wealthy merchant's chest of gold coins?", opts: ["He valued his promise and helping needy neighbors more than personal wealth.", "He did not know how to sew a royal cloak.", "The merchant's gold coins were fake.", "He had already lost the spool of thread."], ans: 0, exp: "Pak Darma memegang teguh amanah burung hantu perak dan lebih memilih menolong anak yatim serta lansia miskin." },
+      { id: 38, stim: "T8", genre: "Fairy tale", aspect: "Inferensial", diff: "Sedang", q: "How did the townspeople feel after witnessing Pak Darma's actions?", opts: ["They felt inspired and understood the true meaning of generosity.", "They were jealous of the orphans' scarves.", "They demanded gold from the silver owl.", "They asked Pak Darma to close his shop."], ans: 0, exp: "Warga desa tersentuh dan menyadari bahwa keajaiban sejati berlipat ganda ketika dibagikan dengan hati yang tulus." },
+      { id: 39, stim: "T8", genre: "Fairy tale", aspect: "Interpretasi", diff: "Sulit", q: "What does the closing sentence, 'True magic multiplies whenever it is shared with a generous heart,' mean?", opts: ["Kindness grows greater and blesses more people when shared unselfishly.", "Magic spools can only be used once a year.", "Tailors should work only at night.", "Wealth increases only when kept in a chest."], ans: 0, exp: "Kalimat penutup menafsirkan bahwa kebaikan dan keberkahan justru bertambah luas ketika dibagikan dengan ikhlas." },
+      { id: 40, stim: "T8", genre: "Fairy tale", aspect: "Evaluasi", diff: "Sulit", q: "Was the silver owl's rule ('never sell it for gold') fair and meaningful in the story?", opts: ["Yes, because it ensured the gift served those in genuine need rather than greed.", "No, because Pak Darma deserved to become rich.", "No, because the merchant needed a cloak more than the orphans.", "Yes, because gold is heavier than wool."], ans: 0, exp: "Aturan tersebut sangat bermakna karena menjaga agar anugerah digunakan untuk kemaslahatan kaum lemah, bukan keserakahan." },
+
+      // TEXT 9 (41–45)
+      { id: 41, stim: "T9", genre: "Inspirational", aspect: "Literal", diff: "Mudah", q: "Why did more than half of Bu Wati's dumpling basket remain unsold at nine o'clock?", opts: ["The dumplings were cold.", "A sudden street closure blocked regular commuters on a rainy morning.", "She arrived at the market too late.", "The market was closed for a holiday."], ans: 1, exp: "Penutupan jalan mendadak saat pagi hujan menghalangi para pekerja/pelanggan yang biasa lewat." },
+      { id: 42, stim: "T9", genre: "Inspirational", aspect: "Inferensial", diff: "Sedang", q: "Why was Bu Wati worried when the dumplings did not sell at the market gate?", opts: ["She feared she would not earn enough money for Farhan's geometry set.", "She did not like eating rice dumplings.", "She wanted to go home and sleep.", "She owed money to the market guard."], ans: 0, exp: "Bu Wati khawatir tidak memiliki cukup uang untuk membelikan perlengkapan jangka/geometri sekolah Farhan." },
+      { id: 43, stim: "T9", genre: "Inspirational", aspect: "Inferensial", diff: "Sedang", q: "What does Farhan's reaction reveal about his personality?", opts: ["He is resourceful, supportive, and deeply caring toward his mother.", "He is easily discouraged when plans fail.", "He prefers complaining rather than taking action.", "He dislikes helping his mother sell food."], ans: 0, exp: "Farhan tidak mengeluh, melainkan sigap mencari solusi kreatif membantu ibunya." },
+      { id: 44, stim: "T9", genre: "Inspirational", aspect: "Interpretasi", diff: "Sulit", q: "What does Bu Wati mean by 'When one door closes, patience and effort open a wider window'?", opts: ["When one opportunity is blocked, perseverance and creativity create a better opportunity.", "People should open all windows when cooking.", "Construction workers always buy dumplings.", "Market gates close at nine o'clock."], ans: 0, exp: "Ungkapan kiasan ini bermakna ketika satu jalan rezeki tertutup, kesabaran dan ikhtiar kreatif akan membuka peluang baru yang lebih baik." },
+      { id: 45, stim: "T9", genre: "Inspirational", aspect: "Evaluasi", diff: "Sulit", q: "How effective was the solution Farhan chose to sell the remaining dumplings?", opts: ["Highly effective, because he identified hungry workers nearby and kept the food warm.", "Ineffective, because they walked too far in the rain.", "Unnecessary, because customers would have come eventually.", "Risky, because construction workers do not eat breakfast."], ans: 0, exp: "Solusi Farhan sangat tepat sasaran: menjaga makanan tetap hangat dan membawanya langsung ke lokasi pekerja yang sedang beristirahat." },
+
+      // TEXT 10 (46–50)
+      { id: 46, stim: "T10", genre: "Adventure", aspect: "Literal", diff: "Mudah", q: "What actually caused the eerie whispering sound inside the old barn?", opts: ["A ghost hiding in the hay", "Wind blowing through a cracked window and vibrating a loose tin weathervane against a bamboo pipe", "Campers playing a prank outside", "Grandfather's radio left on upstairs"], ans: 1, exp: "Suara bisikan berasal dari angin yang menggetarkan pelat seng penunjuk arah angin pada pipa bambu berongga." },
+      { id: 47, stim: "T10", genre: "Adventure", aspect: "Inferensial", diff: "Sedang", q: "What resulted from Arman and Nisa's decision to investigate the barn calmly?", opts: ["They uncovered the scientific cause of the sound and rescued a trapped kitten.", "They got trapped inside the loft until morning.", "They frightened the younger campers even more.", "They broke the grandfather's flashlight."], ans: 0, exp: "Keberanian mereka menyelidiki secara rasional membuahkan dua hal: menemukan penjelasan ilmiah dan menyelamatkan anak kucing yang terjebak." },
+      { id: 48, stim: "T10", genre: "Adventure", aspect: "Inferensial", diff: "Sedang", q: "What attitude did Arman and Nisa show compared to the younger campers?", opts: ["They were rational, curious, and compassionate rather than superstitious.", "They were reckless and ignored all safety.", "They were fearful of the dark.", "They wanted to tease the younger campers."], ans: 0, exp: "Arman dan Nisa bersikap kritis, ilmiah (Cinta Ilmu), dan penuh kasih sayang (Cinta Sesama) alih-alih percaya rumor mistis." },
+      { id: 49, stim: "T10", genre: "Adventure", aspect: "Interpretasi", diff: "Sulit", q: "What does the phrase 'turning a scary rumor into a memorable lesson' signify?", opts: ["Knowledge and critical thinking replace irrational fear with understanding.", "Scary stories are the best way to teach science.", "Barns should always be locked at night.", "Younger campers should never join camps."], ans: 0, exp: "Ungkapan ini menafsirkan bagaimana rasa ingin tahu ilmiah mampu mengubah ketakutan tanpa dasar menjadi pembelajaran bermakna." },
+      { id: 50, stim: "T10", genre: "Adventure", aspect: "Evaluasi", diff: "Sulit", q: "Which evaluation best supports Arman and Nisa's actions in the story?", opts: ["Their actions were exemplary because they verified facts safely and helped a helpless animal.", "They should have run away and locked the barn door.", "They wasted time fixing the tin plate.", "They should have let the kitten stay behind the hay."], ans: 0, exp: "Tindakan mereka sangat terpuji: memverifikasi fakta secara aman, menyelamatkan makhluk hidup, dan mengedukasi adik-adik mereka." }
+    ];
+
+    // =========================================================================
+    // 2. BILINGUAL DICTIONARY (BAHASA INDONESIA & ENGLISH)
+    // =========================================================================
+    const I18N = {
+      id: {
+        loginSubtitle: "Asesmen Sumatif Literasi Membaca: Narrative Text • Bahasa Inggris Kelas VIII (Fase D)",
+        usernameLabel: "Username Akses",
+        passwordLabel: "Kata Sandi Keamanan",
+        phUsername: "Masukkan Username",
+        phPassword: "Masukkan Kata Sandi",
+        loginBtn: "Masuk ke Portal Asesmen",
+        stepBadge: "REGISTRASI PESERTA ASESMEN",
+        identityTitle: "Menu Identitas Murid",
+        identityNoticeTitle: "Sistem Pengacakan Otomatis & Penguncian Keamanan:",
+        identityNoticeDesc: "Jika identitas murid berubah, sistem otomatis me-reset seluruh jawaban dan mengacak urutan teks narasi, soal, serta opsi jawaban tanpa mengubah substansi materi. Durasi pengerjaan dibatasi 80 menit real-time. Membuka tab baru, berpindah ke search engine/aplikasi lain, atau mengunci layar perangkat akan mengunci aplikasi secara otomatis.",
+        fieldNama: "Nama Lengkap Murid *",
+        fieldKelas: "Kelas *",
+        fieldPresensi: "Nomor Presensi *",
+        fieldMadrasah: "Asal Madrasah / Sekolah *",
+        specQuestions: "Jumlah Soal",
+        specDuration: "Batas Waktu",
+        specCert: "Syarat Sertifikat",
+        btnBackLogin: "Kembali",
+        btnStartExam: "Mulai Asesmen Sekarang",
+        btnCancel: "Batal",
+        btnConfirm: "Ya, Lanjutkan",
+        lockoutTitle: "APLIKASI TERKUNCI OTOMATIS!",
+        proctorUnlockTitle: "Otorisasi Pengawas untuk Membuka Kunci:",
+        cardStudentBadge: "IDENTITAS PESERTA",
+        lblClass: "Kelas:",
+        lblNo: "Presensi:",
+        lblSchool: "Madrasah:",
+        progressTitle: "Progres Pengerjaan",
+        statDone: "Dijawab",
+        statFlag: "Ragu",
+        statLeft: "Kosong",
+        menuControl: "Sidebar Dashboard",
+        menuIdentity: "Menu Identitas Murid",
+        menuExamRoom: "Ruang Soal & Stimulus",
+        menuLang: "Bahasa Antarmuka",
+        menuTheme: "Pencahayaan Layar",
+        menuLockout: "Menu Lock Out",
+        btnFinishExam: "Selesai & Kumpulkan",
+        headerSubject: "Literasi Membaca: Narrative Text • Bahasa Inggris Kelas VIII (Fase D)",
+        liveClockLbl: "Waktu Sistem",
+        timerLabel: "Sisa Waktu (80 Menit)",
+        qWord: "SOAL",
+        btnFlag: "Tandai Ragu-Ragu",
+        btnFlaggedActive: "Ditandai Ragu-Ragu",
+        btnPrev: "Sebelumnya",
+        btnNext: "Soal Berikutnya",
+        navGridTitle: "Menu Navigasi Soal",
+        legAnswered: "Sudah Dijawab",
+        legFlagged: "Ragu-Ragu",
+        legCurrent: "Aktif",
+        legEmpty: "Belum Dijawab",
+        navTip: "Pastikan seluruh 50 soal telah terjawab sebelum batas waktu 80 menit berakhir.",
+        resBadge: "LAPORAN HASIL ASESMEN LITERASI MEMBACA",
+        finalScoreLbl: "NILAI AKHIR",
+        certHeading: "Sertifikat Kelulusan Digital (Skor ≥ 80)",
+        certSub: "Selamat! Anda memenuhi standar ketuntasan minimal 80 untuk memperoleh sertifikat resmi."
+      },
+      en: {
+        loginSubtitle: "Summative Reading Literacy Assessment: Narrative Text • Grade VIII English (Phase D)",
+        usernameLabel: "Access Username",
+        passwordLabel: "Security Password",
+        phUsername: "Enter Username",
+        phPassword: "Enter Password",
+        loginBtn: "Enter Assessment Portal",
+        stepBadge: "CANDIDATE REGISTRATION",
+        identityTitle: "Student Identity Menu",
+        identityNoticeTitle: "Auto-Randomization & Proctoring Lock Protection:",
+        identityNoticeDesc: "Whenever student identity changes, the system automatically resets all answers and shuffles narrative texts, questions, and answer options without altering core content. Duration is strictly limited to 80 minutes in real time. Opening a new browser tab, switching to a search engine/another app, or locking the device screen will immediately lock out the application.",
+        fieldNama: "Student Full Name *",
+        fieldKelas: "Class *",
+        fieldPresensi: "Attendance Number *",
+        fieldMadrasah: "Madrasah / School Origin *",
+        specQuestions: "Total Items",
+        specDuration: "Time Limit",
+        specCert: "Certificate Rule",
+        btnBackLogin: "Back",
+        btnStartExam: "Start Assessment Now",
+        btnCancel: "Cancel",
+        btnConfirm: "Yes, Continue",
+        lockoutTitle: "APPLICATION AUTOMATICALLY LOCKED!",
+        proctorUnlockTitle: "Proctor Authorization to Unlock:",
+        cardStudentBadge: "CANDIDATE IDENTITY",
+        lblClass: "Class:",
+        lblNo: "No:",
+        lblSchool: "School:",
+        progressTitle: "Completion Progress",
+        statDone: "Answered",
+        statFlag: "Flagged",
+        statLeft: "Empty",
+        menuControl: "Dashboard Sidebar",
+        menuIdentity: "Student Identity Menu",
+        menuExamRoom: "Exam & Reading Room",
+        menuLang: "Interface Language",
+        menuTheme: "Screen Lighting",
+        menuLockout: "Lock Out Menu",
+        btnFinishExam: "Finish & Submit",
+        headerSubject: "Reading Literacy: Narrative Text • Grade VIII English (Phase D)",
+        liveClockLbl: "System Time",
+        timerLabel: "Remaining Time (80 Mins)",
+        qWord: "ITEM",
+        btnFlag: "Flag for Review",
+        btnFlaggedActive: "Flagged for Review",
+        btnPrev: "Previous",
+        btnNext: "Next Question",
+        navGridTitle: "Question Navigator",
+        legAnswered: "Answered",
+        legFlagged: "Flagged",
+        legCurrent: "Current",
+        legEmpty: "Unanswered",
+        navTip: "Ensure all 50 items are answered before the 80-minute timer expires.",
+        resBadge: "NARRATIVE READING LITERACY DIAGNOSTIC REPORT",
+        finalScoreLbl: "FINAL SCORE",
+        certHeading: "Digital Achievement Certificate (Score ≥ 80)",
+        certSub: "Congratulations! You achieved the minimum passing score of 80 to unlock your official certificate."
+      }
+    };
+
+    // =========================================================================
+    // 3. APPLICATION STATE
+    // =========================================================================
+    const ADMIN_USER = "admin";
+    const ADMIN_PASS = "bismillah";
+    const EXAM_DURATION_SECONDS = 80 * 60; // Strictly 80 minutes = 4800 seconds
+
+    let state = {
+      lang: "id",
+      theme: "dark",
+      isAuthenticated: false,
+      examActive: false,
+      examSubmitted: false,
+      isLockedOut: false,
+      identitySignature: "",
+      student: {
+        name: "",
+        className: "",
+        number: "",
+        school: ""
+      },
+      questions: [],       // Shuffled list of 50 questions
+      currentIndex: 0,     // 0..49
+      answers: {},         // map question.id -> selected shuffled option index (0..3)
+      flagged: {},         // map question.id -> boolean
+      secondsLeft: EXAM_DURATION_SECONDS,
+      timerInterval: null
+    };
+
+    // Live System Clock Updater
+    setInterval(() => {
+      const clockEl = document.getElementById("liveSystemClock");
+      if (clockEl) {
+        clockEl.textContent = new Date().toLocaleTimeString("id-ID", { hour12: false });
+      }
+    }, 1000);
+
+    // =========================================================================
+    // 4. UTILITY FUNCTIONS (TOAST, MODAL, LANGUAGE, THEME)
+    // =========================================================================
+    function showToast(message, type = "info") {
+      const container = document.getElementById("toastContainer");
+      const toast = document.createElement("div");
+      const colors = {
+        info: "bg-velvetDark/95 border-amber-400 text-slate-100",
+        warn: "bg-amber-950/95 border-amber-400 text-amber-100",
+        danger: "bg-pink-950/95 border-pink-500 text-pink-100"
+      };
+      toast.className = `pointer-events-auto px-4 py-3 rounded-2xl border shadow-xl text-xs font-semibold flex items-center gap-2.5 transform transition-all duration-300 ${colors[type] || colors.info}`;
+      toast.innerHTML = `<span class="w-2 h-2 rounded-full bg-pink-400 shrink-0"></span><span>${message}</span>`;
+      container.appendChild(toast);
+      setTimeout(() => {
+        toast.style.opacity = "0";
+        toast.style.transform = "translateY(-10px)";
+        setTimeout(() => toast.remove(), 300);
+      }, 3500);
+    }
+
+    function openConfirmModal(title, message, onConfirm) {
+      const modal = document.getElementById("customModal");
+      document.getElementById("modalTitle").textContent = title;
+      document.getElementById("modalMessage").textContent = message;
+      modal.classList.remove("hidden");
+      modal.classList.add("flex");
+
+      const cancelBtn = document.getElementById("modalCancelBtn");
+      const confirmBtn = document.getElementById("modalConfirmBtn");
+
+      const close = () => {
+        modal.classList.add("hidden");
+        modal.classList.remove("flex");
+      };
+
+      cancelBtn.onclick = close;
+      confirmBtn.onclick = () => {
+        close();
+        if (onConfirm) onConfirm();
+      };
+    }
+
+    function toggleLanguage() {
+      state.lang = state.lang === "id" ? "en" : "id";
+      applyLanguage();
+      showToast(state.lang === "id" ? "Bahasa diubah ke Bahasa Indonesia" : "Language switched to English", "info");
+    }
+
+    function applyLanguage() {
+      const dict = I18N[state.lang];
+      document.querySelectorAll("[data-i18n]").forEach(el => {
+        const key = el.getAttribute("data-i18n");
+        if (dict[key]) el.textContent = dict[key];
+      });
+      document.querySelectorAll("[data-i18n-placeholder]").forEach(el => {
+        const key = el.getAttribute("data-i18n-placeholder");
+        if (dict[key]) el.setAttribute("placeholder", dict[key]);
+      });
+      const sideLangBadge = document.getElementById("sideLangBadge");
+      if (sideLangBadge) sideLangBadge.textContent = state.lang === "id" ? "INDONESIA" : "ENGLISH";
+      if (state.questions.length > 0 && state.examActive) {
+        updateFlagButtonUI();
+      }
+    }
+
+    function toggleTheme() {
+      const html = document.documentElement;
+      if (html.classList.contains("dark")) {
+        html.classList.remove("dark");
+        state.theme = "light";
+      } else {
+        html.classList.add("dark");
+        state.theme = "dark";
+      }
+      const badge = document.getElementById("sideThemeBadge");
+      if (badge) {
+        badge.textContent = state.theme === "dark"
+          ? (state.lang === "id" ? "GELAP" : "DARK")
+          : (state.lang === "id" ? "TERANG" : "LIGHT");
+      }
+    }
+
+    function togglePassVisibility(inputId) {
+      const inp = document.getElementById(inputId);
+      inp.type = inp.type === "password" ? "text" : "password";
+    }
+
+    function toggleMobileSidebar() {
+      document.getElementById("sidebarDashboard").classList.toggle("-translate-x-full");
+    }
+
+    function toggleMobileNavDrawer() {
+      document.getElementById("questionNavDrawer").classList.toggle("translate-x-full");
+    }
+
+    // =========================================================================
+    // 5. AUTHENTICATION & STUDENT IDENTITY + AUTO-RANDOMIZATION & AUTO-RESET
+    // =========================================================================
+    document.getElementById("loginForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      const user = document.getElementById("loginUsername").value.trim();
+      const pass = document.getElementById("loginPassword").value.trim();
+      const errEl = document.getElementById("loginError");
+
+      if (user === ADMIN_USER && pass === ADMIN_PASS) {
+        errEl.classList.add("hidden");
+        state.isAuthenticated = true;
+        document.getElementById("loginView").classList.add("hidden");
+        document.getElementById("identityView").classList.remove("hidden");
+        showToast(
+          state.lang === "id"
+            ? "Otentikasi berhasil. Silakan isi Identitas Murid."
+            : "Authentication successful. Please complete Student Identity.",
+          "info"
+        );
+      } else {
+        errEl.textContent = state.lang === "id"
+          ? "Akses ditolak! Username atau kata sandi tidak valid."
+          : "Access denied! Invalid username or password.";
+        errEl.classList.remove("hidden");
+      }
+    });
+
+    function logoutToLogin() {
+      stopTimer();
+      state.examActive = false;
+      document.body.classList.remove("exam-locked-copy");
+      document.getElementById("identityView").classList.add("hidden");
+      document.getElementById("examWorkspace").classList.add("hidden");
+      document.getElementById("loginView").classList.remove("hidden");
+      document.getElementById("loginUsername").value = "";
+      document.getElementById("loginPassword").value = "";
+    }
+
+    function openIdentityMenu() {
+      state.examActive = false;
+      document.body.classList.remove("exam-locked-copy");
+      document.getElementById("examWorkspace").classList.add("hidden");
+      document.getElementById("identityView").classList.remove("hidden");
+
+      document.getElementById("studentName").value = state.student.name;
+      document.getElementById("studentClass").value = state.student.className;
+      document.getElementById("studentNumber").value = state.student.number;
+      document.getElementById("studentSchool").value = state.student.school;
+    }
+
+    function switchToExamView() {
+      if (state.examSubmitted) {
+        document.getElementById("examStage").classList.add("hidden");
+        document.getElementById("resultsStage").classList.remove("hidden");
+      } else {
+        document.getElementById("resultsStage").classList.add("hidden");
+        document.getElementById("examStage").classList.remove("hidden");
+      }
+      document.getElementById("sidebarDashboard").classList.add("-translate-x-full");
+    }
+
+    // Seeded Deterministic PRNG based on Student Identity String
+    function createSeededRandom(seedStr) {
+      let h = 2166136261 >>> 0;
+      for (let i = 0; i < seedStr.length; i++) {
+        h ^= seedStr.charCodeAt(i);
+        h = Math.imul(h, 16777619);
+      }
+      return function () {
+        h += h << 13;
+        h ^= h >>> 7;
+        h += h << 3;
+        h ^= h >>> 17;
+        h += h << 5;
+        return ((h >>> 0) / 4294967296);
+      };
+    }
+
+    function shuffleWithRng(arr, rng) {
+      const copy = [...arr];
+      for (let i = copy.length - 1; i > 0; i--) {
+        const j = Math.floor(rng() * (i + 1));
+        [copy[i], copy[j]] = [copy[j], copy[i]];
+      }
+      return copy;
+    }
+
+    // Randomizes order of narrative texts, questions within each text, and A-D options without changing core substance
+    function buildRandomizedExamPackage(seedString) {
+      const rng = createSeededRandom(seedString + "|" + Date.now());
+      const groupsMap = {};
+      RAW_QUESTIONS.forEach(q => {
+        if (!groupsMap[q.stim]) groupsMap[q.stim] = [];
+        groupsMap[q.stim].push(q);
+      });
+
+      const stimKeys = Object.keys(groupsMap);
+      const shuffledStimKeys = shuffleWithRng(stimKeys, rng);
+
+      let orderedRaw = [];
+      shuffledStimKeys.forEach(k => {
+        orderedRaw = orderedRaw.concat(shuffleWithRng(groupsMap[k], rng));
+      });
+
+      return orderedRaw.map((item, idx) => {
+        const indexedOpts = item.opts.map((text, optIdx) => ({
+          text,
+          isCorrect: optIdx === item.ans
+        }));
+        const shuffledOpts = shuffleWithRng(indexedOpts, rng);
+        const newAnsIndex = shuffledOpts.findIndex(o => o.isCorrect);
+
+        return {
+          ...item,
+          displayNum: idx + 1,
+          shuffledOpts: shuffledOpts.map(o => o.text),
+          shuffledAns: newAnsIndex
+        };
+      });
+    }
+
+    document.getElementById("identityForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      const name = document.getElementById("studentName").value.trim();
+      const className = document.getElementById("studentClass").value.trim();
+      const number = document.getElementById("studentNumber").value.trim();
+      const school = document.getElementById("studentSchool").value.trim();
+
+      if (!name || !className || !number || !school) return;
+
+      const newSignature = `${name.toLowerCase()}|${className.toLowerCase()}|${number.toLowerCase()}|${school.toLowerCase()}`;
+      const identityChanged = newSignature !== state.identitySignature;
+
+      state.student = { name, className, number, school };
+
+      document.getElementById("sideStudentName").textContent = name;
+      document.getElementById("sideStudentClass").textContent = className;
+      document.getElementById("sideStudentNumber").textContent = number;
+      document.getElementById("sideStudentSchool").textContent = school;
+      document.getElementById("mobileStudentBadge").textContent = `${name} (${className})`;
+
+      if (identityChanged || state.questions.length === 0 || state.examSubmitted) {
+        // AUTO-RESET & AUTO-RANDOMIZE ON STUDENT IDENTITY CHANGE
+        state.identitySignature = newSignature;
+        state.answers = {};
+        state.flagged = {};
+        state.currentIndex = 0;
+        state.examSubmitted = false;
+        state.isLockedOut = false;
+        state.secondsLeft = EXAM_DURATION_SECONDS;
+        state.questions = buildRandomizedExamPackage(newSignature);
+
+        showToast(
+          state.lang === "id"
+            ? "Identitas diperbarui! Urutan teks & soal diacak otomatis serta sesi di-reset (80 Menit)."
+            : "Identity updated! Texts & questions auto-shuffled and session reset (80 Mins).",
+          "warn"
+        );
+      }
+
+      document.getElementById("identityView").classList.add("hidden");
+      document.getElementById("examWorkspace").classList.remove("hidden");
+      document.getElementById("examStage").classList.remove("hidden");
+      document.getElementById("resultsStage").classList.add("hidden");
+      document.getElementById("sideSubmitBtn").classList.remove("hidden");
+
+      state.examActive = true;
+      document.body.classList.add("exam-locked-copy");
+
+      renderQuestionNavGrid();
+      renderCurrentQuestion();
+      updateProgressStats();
+      startTimer();
+    });
+
+    // =========================================================================
+    // 6. REAL-TIME 80-MINUTE TIMER & AUTOMATIC STOP
+    // =========================================================================
+    function formatTimeMMSS(totalSec) {
+      const mins = Math.floor(totalSec / 60);
+      const secs = totalSec % 60;
+      return `${String(mins).padStart(2, "0")}:${String(secs).padStart(2, "0")}`;
+    }
+
+    function startTimer() {
+      stopTimer();
+      updateTimerDisplays();
+      state.timerInterval = setInterval(() => {
+        if (!state.examActive || state.isLockedOut || state.examSubmitted) return;
+
+        state.secondsLeft--;
+        updateTimerDisplays();
+
+        if (state.secondsLeft === 300) {
+          showToast(state.lang === "id" ? "Peringatan: Sisa waktu 5 menit lagi!" : "Warning: 5 minutes remaining!", "warn");
+        }
+
+        if (state.secondsLeft <= 0) {
+          state.secondsLeft = 0;
+          updateTimerDisplays();
+          stopTimer();
+          showToast(
+            state.lang === "id"
+              ? "WAKTU HABIS (80 Menit)! Aplikasi berhenti otomatis & menghitung hasil."
+              : "TIME EXPIRED (80 Mins)! Exam stopped automatically & grading results.",
+            "danger"
+          );
+          finalizeAndGradeExam(true);
+        }
+      }, 1000);
+    }
+
+    function stopTimer() {
+      if (state.timerInterval) {
+        clearInterval(state.timerInterval);
+        state.timerInterval = null;
+      }
+    }
+
+    function updateTimerDisplays() {
+      const formatted = formatTimeMMSS(state.secondsLeft);
+      const desk = document.getElementById("desktopTimerDisplay");
+      const mob = document.getElementById("mobileTimerDisplay");
+      if (desk) {
+        desk.textContent = formatted;
+        if (state.secondsLeft <= 300) {
+          desk.classList.add("text-pink-500", "animate-pulse");
+        } else {
+          desk.classList.remove("text-pink-500", "animate-pulse");
+        }
+      }
+      if (mob) mob.textContent = formatted;
+    }
+
+    // =========================================================================
+    // 7. STRICT ANTI-CHEAT: NO COPY/PASTE, TAB SWITCH & SCREEN LOCK LOCKOUT
+    // =========================================================================
+    ["copy", "cut", "paste", "contextmenu", "selectstart", "dragstart"].forEach(evtName => {
+      document.addEventListener(evtName, function (e) {
+        if (state.examActive && !state.examSubmitted) {
+          e.preventDefault();
+          if (evtName === "copy" || evtName === "paste" || evtName === "cut") {
+            showToast(
+              state.lang === "id"
+                ? "Keamanan Aktif: Fitur Copy / Paste dikunci selama ujian!"
+                : "Security Active: Copy / Paste is disabled during the exam!",
+              "danger"
+            );
+          }
+        }
+      });
+    });
+
+    document.addEventListener("keydown", function (e) {
+      if (!state.examActive || state.examSubmitted) return;
+
+      const key = e.key.toLowerCase();
+      if (
+        (e.ctrlKey && ["c", "v", "x", "u", "s", "p", "a"].includes(key)) ||
+        (e.ctrlKey && e.shiftKey && ["i", "j", "c"].includes(key)) ||
+        e.key === "F12" ||
+        e.key === "PrintScreen"
+      ) {
+        e.preventDefault();
+        showToast("Pintasan keyboard diblokir oleh sistem pengawas!", "danger");
+      }
+    });
+
+    function triggerSecurityLockout(reason) {
+      if (!state.examActive || state.examSubmitted || state.isLockedOut) return;
+
+      state.isLockedOut = true;
+      state.examActive = false;
+      stopTimer();
+
+      document.getElementById("lockStudentName").textContent = state.student.name || "-";
+      document.getElementById("lockStudentClass").textContent = `${state.student.className} (No. ${state.student.number})`;
+      document.getElementById("lockTimestamp").textContent = new Date().toLocaleTimeString("id-ID");
+      if (reason) {
+        document.getElementById("lockoutReasonText").textContent = reason;
+      }
+
+      document.getElementById("unlockUser").value = "";
+      document.getElementById("unlockPass").value = "";
+      document.getElementById("unlockError").classList.add("hidden");
+      document.getElementById("lockoutView").classList.remove("hidden");
+    }
+
+    document.addEventListener("visibilitychange", function () {
+      if (document.hidden && state.examActive && !state.examSubmitted) {
+        triggerSecurityLockout(
+          "Pelanggaran Terdeteksi: Anda membuka tab browser baru, berpindah ke search engine/aplikasi lain, atau mengunci layar perangkat. Aplikasi dikunci otomatis!"
+        );
+      }
+    });
+
+    window.addEventListener("blur", function () {
+      if (state.examActive && !state.examSubmitted) {
+        triggerSecurityLockout(
+          "Pelanggaran Terdeteksi: Fokus jendela browser berpindah ke jendela/aplikasi lain. Aplikasi dikunci otomatis!"
+        );
+      }
+    });
+
+    window.addEventListener("pagehide", function () {
+      if (state.examActive && !state.examSubmitted) {
+        triggerSecurityLockout(
+          "Pelanggaran Terdeteksi: Layar perangkat dikunci atau halaman disembunyikan. Aplikasi dikunci otomatis!"
+        );
+      }
+    });
+
+    function triggerManualLockout() {
+      triggerSecurityLockout(
+        "Sesi dikunci secara manual melalui Menu Lock Out. Hubungi pengawas untuk otorisasi membuka kunci."
+      );
+    }
+
+    function attemptProctorUnlock(resetToIdentity) {
+      const u = document.getElementById("unlockUser").value.trim();
+      const p = document.getElementById("unlockPass").value.trim();
+      const err = document.getElementById("unlockError");
+
+      if (u === ADMIN_USER && p === ADMIN_PASS) {
+        err.classList.add("hidden");
+        state.isLockedOut = false;
+        document.getElementById("lockoutView").classList.add("hidden");
+
+        if (resetToIdentity) {
+          state.identitySignature = "";
+          openIdentityMenu();
+          showToast("Kunci dibuka. Silakan masukkan identitas murid baru.", "info");
+        } else {
+          state.examActive = true;
+          startTimer();
+          showToast("Otorisasi pengawas berhasil. Sesi ujian dilanjutkan.", "info");
+        }
+      } else {
+        err.textContent = "Kredensial pengawas tidak valid! Kunci tetap aktif.";
+        err.classList.remove("hidden");
+      }
+    }
+
+    // =========================================================================
+    // 8. QUESTION RENDERING, NAVIGATION & INTERACTION
+    // =========================================================================
+    function renderCurrentQuestion() {
+      const q = state.questions[state.currentIndex];
+      if (!q) return;
+
+      document.getElementById("currentQNumberBadge").textContent = state.currentIndex + 1;
+      document.getElementById("qGenreBadge").textContent = q.genre;
+      document.getElementById("qAspectBadge").textContent = q.aspect;
+      document.getElementById("qDiffBadge").textContent = q.diff;
+
+      // Render Stimulus
+      const stim = STIMULUS_DATA[q.stim];
+      document.getElementById("stimulusTitle").textContent = stim ? stim.title : "NARRATIVE STIMULUS";
+      document.getElementById("stimulusPancaBadge").textContent = stim ? stim.panca : "Panca Cinta";
+      document.getElementById("stimulusBody").innerHTML = stim ? stim.html : "";
+
+      // Render Question Stem
+      document.getElementById("questionStem").innerHTML = q.q.replace(/\n/g, "<br/>");
+
+      // Render 4 Options
+      const optsContainer = document.getElementById("optionsContainer");
+      optsContainer.innerHTML = "";
+      const letters = ["A", "B", "C", "D"];
+      const selectedOpt = state.answers[q.id];
+
+      q.shuffledOpts.forEach((optText, idx) => {
+        const isSelected = selectedOpt === idx;
+        const btn = document.createElement("button");
+        btn.type = "button";
+        btn.onclick = () => selectOption(q.id, idx);
+        btn.className = `w-full text-left p-4 rounded-2xl border transition-all flex items-center gap-3.5 group ${
+          isSelected
+            ? "bg-gradient-to-r from-amber-500/20 to-pink-500/15 border-amber-400 shadow-[0_0_22px_rgba(245,158,11,0.25)]"
+            : "bg-slate-50 dark:bg-obsidian/80 border-slate-300 dark:border-velvetBorder hover:border-pink-500/70"
+        }`;
+
+        btn.innerHTML = `
+          <span class="w-9 h-9 rounded-xl flex items-center justify-center font-mono text-sm font-extrabold shrink-0 transition ${
+            isSelected
+              ? "gold-btn"
+              : "bg-slate-200 dark:bg-velvetDark text-slate-700 dark:text-pink-200 group-hover:bg-pink-500 group-hover:text-white"
+          }">${letters[idx]}</span>
+          <span class="text-sm sm:text-base font-medium ${
+            isSelected ? "text-slate-900 dark:text-white font-bold" : "text-slate-700 dark:text-slate-200"
+          }">${optText}</span>
+        `;
+        optsContainer.appendChild(btn);
+      });
+
+      document.getElementById("prevQBtn").disabled = state.currentIndex === 0;
+      const nextBtn = document.getElementById("nextQBtn");
+      if (state.currentIndex === state.questions.length - 1) {
+        nextBtn.querySelector("span").textContent = state.lang === "id" ? "Selesai & Kumpulkan" : "Finish & Submit";
+        nextBtn.className = "gold-btn px-6 py-3 rounded-xl text-xs sm:text-sm uppercase tracking-wider flex items-center gap-2";
+        nextBtn.onclick = confirmSubmitExam;
+      } else {
+        nextBtn.querySelector("span").textContent = state.lang === "id" ? "Soal Berikutnya" : "Next Question";
+        nextBtn.className = "pink-btn px-6 py-3 rounded-xl text-xs sm:text-sm uppercase tracking-wider flex items-center gap-2";
+        nextBtn.onclick = () => navigateQuestion(1);
+      }
+
+      updateFlagButtonUI();
+      renderQuestionNavGrid();
+    }
+
+    function selectOption(questionId, optionIndex) {
+      if (!state.examActive || state.examSubmitted) return;
+      state.answers[questionId] = optionIndex;
+      renderCurrentQuestion();
+      updateProgressStats();
+    }
+
+    function toggleFlagCurrent() {
+      const q = state.questions[state.currentIndex];
+      if (!q) return;
+      state.flagged[q.id] = !state.flagged[q.id];
+      updateFlagButtonUI();
+      updateProgressStats();
+      renderQuestionNavGrid();
+    }
+
+    function updateFlagButtonUI() {
+      const q = state.questions[state.currentIndex];
+      const isFlagged = !!state.flagged[q.id];
+      const btn = document.getElementById("flagBtn");
+      const txt = document.getElementById("flagBtnText");
+      if (isFlagged) {
+        btn.className = "px-3.5 py-2 rounded-xl text-xs font-bold pink-btn shadow transition flex items-center gap-2";
+        txt.textContent = I18N[state.lang].btnFlaggedActive;
+      } else {
+        btn.className = "px-3.5 py-2 rounded-xl text-xs font-bold border border-pink-400/50 bg-pink-500/10 text-pink-600 dark:text-pink-300 hover:bg-pink-500/20 transition flex items-center gap-2";
+        txt.textContent = I18N[state.lang].btnFlag;
+      }
+    }
+
+    function navigateQuestion(delta) {
+      const nextIdx = state.currentIndex + delta;
+      if (nextIdx >= 0 && nextIdx < state.questions.length) {
+        state.currentIndex = nextIdx;
+        renderCurrentQuestion();
+      }
+    }
+
+    function jumpToQuestion(index) {
+      state.currentIndex = index;
+      renderCurrentQuestion();
+      document.getElementById("questionNavDrawer").classList.add("translate-x-full");
+    }
+
+    function renderQuestionNavGrid() {
+      const grid = document.getElementById("questionNumberGrid");
+      grid.innerHTML = "";
+
+      state.questions.forEach((q, idx) => {
+        const isCurrent = idx === state.currentIndex;
+        const isAnswered = state.answers[q.id] !== undefined;
+        const isFlagged = !!state.flagged[q.id];
+
+        let styleClass = "bg-slate-200 dark:bg-obsidian text-slate-700 dark:text-slate-300 border-slate-300 dark:border-velvetBorder";
+        if (isFlagged) {
+          styleClass = "bg-pink-500 text-white border-pink-400 font-extrabold";
+        } else if (isAnswered) {
+          styleClass = "bg-amber-400 text-obsidian border-amber-500 font-extrabold";
+        }
+
+        if (isCurrent) {
+          styleClass += " ring-2 ring-pink-500 ring-offset-2 ring-offset-white dark:ring-offset-velvetDark scale-105";
+        }
+
+        const btn = document.createElement("button");
+        btn.type = "button";
+        btn.onclick = () => jumpToQuestion(idx);
+        btn.className = `h-10 rounded-xl border font-mono text-xs transition-all flex items-center justify-center ${styleClass}`;
+        btn.textContent = idx + 1;
+        grid.appendChild(btn);
+      });
+    }
+
+    function updateProgressStats() {
+      const total = state.questions.length || 50;
+      const answeredCount = Object.keys(state.answers).length;
+      const flaggedCount = Object.values(state.flagged).filter(Boolean).length;
+      const remainingCount = total - answeredCount;
+      const pct = Math.round((answeredCount / total) * 100);
+
+      document.getElementById("progressPercentText").textContent = `${pct}%`;
+      document.getElementById("progressBarFill").style.width = `${pct}%`;
+      document.getElementById("statAnswered").textContent = answeredCount;
+      document.getElementById("statFlagged").textContent = flaggedCount;
+      document.getElementById("statRemaining").textContent = remainingCount;
+    }
+
+    // =========================================================================
+    // 9. GRADING, DIAGNOSTICS & CERTIFICATE GENERATOR (MIN SCORE 80)
+    // =========================================================================
+    function confirmSubmitExam() {
+      const answeredCount = Object.keys(state.answers).length;
+      const unanswered = 50 - answeredCount;
+      const msg = unanswered > 0
+        ? `Anda baru menjawab ${answeredCount} dari 50 soal (${unanswered} soal masih kosong). Apakah Anda yakin ingin mengakhiri dan mengumpulkan ujian sekarang?`
+        : "Seluruh 50 soal telah terjawab. Apakah Anda yakin ingin mengumpulkan jawaban dan melihat hasil nilai serta sertifikat?";
+
+      openConfirmModal("Konfirmasi Pengumpulan Asesmen", msg, () => {
+        finalizeAndGradeExam(false);
+      });
+    }
+
+    function finalizeAndGradeExam(autoExpired = false) {
+      stopTimer();
+      state.examActive = false;
+      state.examSubmitted = true;
+      document.body.classList.remove("exam-locked-copy");
+
+      let correctCount = 0;
+      const aspectStats = {};
+      Object.keys(ASPECT_NAMES).forEach(k => {
+        aspectStats[k] = { name: ASPECT_NAMES[k], correct: 0, total: 0 };
+      });
+
+      const textStats = {};
+      Object.keys(TEXT_TITLES_SHORT).forEach(k => {
+        textStats[k] = { name: TEXT_TITLES_SHORT[k], correct: 0, total: 0 };
+      });
+
+      state.questions.forEach(q => {
+        const userAns = state.answers[q.id];
+        const isCorrect = userAns !== undefined && userAns === q.shuffledAns;
+        if (isCorrect) correctCount++;
+
+        if (aspectStats[q.aspect]) {
+          aspectStats[q.aspect].total++;
+          if (isCorrect) aspectStats[q.aspect].correct++;
+        }
+        if (textStats[q.stim]) {
+          textStats[q.stim].total++;
+          if (isCorrect) textStats[q.stim].correct++;
+        }
+      });
+
+      const finalScore = Math.round((correctCount / 50) * 100);
+      const elapsedSec = EXAM_DURATION_SECONDS - state.secondsLeft;
+      const elapsedMins = Math.floor(elapsedSec / 60);
+      const elapsedRemSec = elapsedSec % 60;
+
+      let categoryText = "PERLU BIMBINGAN";
+      let badgeStyle = "bg-rose-500/20 text-rose-500 border border-rose-500/40";
+      if (finalScore >= 85) {
+        categoryText = "SANGAT BAIK (EXCELLENT)";
+        badgeStyle = "bg-amber-500/20 text-amber-500 border border-amber-500/45";
+      } else if (finalScore >= 80) {
+        categoryText = "LULUS SERTIFIKAT (GOOD)";
+        badgeStyle = "bg-pink-500/20 text-pink-400 border border-pink-500/45";
+      } else if (finalScore >= 65) {
+        categoryText = "CUKUP (FAIR)";
+        badgeStyle = "bg-sky-500/20 text-sky-400 border border-sky-500/40";
+      }
+
+      document.getElementById("examStage").classList.add("hidden");
+      document.getElementById("resultsStage").classList.remove("hidden");
+      document.getElementById("sideSubmitBtn").classList.add("hidden");
+
+      document.getElementById("resStudentName").textContent = state.student.name;
+      document.getElementById("resStudentMeta").textContent = `Kelas ${state.student.className} • No. Presensi ${state.student.number} • ${state.student.school}`;
+      document.getElementById("resFinalScore").textContent = finalScore;
+      document.getElementById("resCorrectCount").textContent = `${correctCount} / 50 Benar`;
+      const catBadge = document.getElementById("resCategoryBadge");
+      catBadge.textContent = categoryText;
+      catBadge.className = `px-3.5 py-1.5 rounded-xl text-xs font-extrabold uppercase tracking-wider ${badgeStyle}`;
+      document.getElementById("resTimeTakenBadge").textContent = `Durasi: ${elapsedMins}m ${elapsedRemSec}d`;
+
+      // Certificate Unlock Logic (Minimum Score = 80)
+      const certUnlocked = document.getElementById("certificateUnlockedSection");
+      const certLocked = document.getElementById("certificateLockedSection");
+
+      if (finalScore >= 80) {
+        certUnlocked.classList.remove("hidden");
+        certLocked.classList.add("hidden");
+
+        const dateStr = new Date().toLocaleDateString("id-ID", {
+          day: "numeric",
+          month: "long",
+          year: "numeric"
+        });
+        const serialId = `ASAS-NAR-${new Date().getFullYear()}-${Math.floor(100000 + Math.random() * 900000)}`;
+
+        document.getElementById("certSerialId").textContent = serialId;
+        document.getElementById("certStudentName").textContent = state.student.name;
+        document.getElementById("certStudentDetails").textContent =
+          `Kelas: ${state.student.className} • Nomor Presensi: ${state.student.number} • Asal Madrasah: ${state.student.school}`;
+        document.getElementById("certPredicate").textContent = finalScore >= 85 ? "SANGAT BAIK (EXCELLENT)" : "BAIK (GOOD)";
+        document.getElementById("certScoreValue").textContent = `${finalScore} / 100`;
+        document.getElementById("certDateText").textContent = dateStr;
+      } else {
+        certUnlocked.classList.add("hidden");
+        certLocked.classList.remove("hidden");
+      }
+
+      // Render 4 Reading Literacy Aspects Breakdown
+      const aspectList = document.getElementById("aspectBreakdownList");
+      aspectList.innerHTML = "";
+      Object.values(aspectStats).forEach(item => {
+        const pct = item.total > 0 ? Math.round((item.correct / item.total) * 100) : 0;
+        aspectList.innerHTML += `
+          <div class="space-y-1">
+            <div class="flex justify-between text-xs font-semibold">
+              <span class="text-slate-700 dark:text-slate-200">${item.name}</span>
+              <span class="font-mono text-amber-600 dark:text-amber-400">${item.correct}/${item.total} (${pct}%)</span>
+            </div>
+            <div class="w-full h-2 bg-slate-200 dark:bg-obsidian rounded-full overflow-hidden">
+              <div class="h-full gold-pink-gradient rounded-full" style="width: ${pct}%"></div>
+            </div>
+          </div>
+        `;
+      });
+
+      // Render 10 Narrative Texts Breakdown
+      const txtList = document.getElementById("textBreakdownList");
+      txtList.innerHTML = "";
+      Object.values(textStats).forEach(item => {
+        const pct = item.total > 0 ? Math.round((item.correct / item.total) * 100) : 0;
+        txtList.innerHTML += `
+          <div class="space-y-1">
+            <div class="flex justify-between text-xs font-semibold">
+              <span class="text-slate-700 dark:text-slate-200 truncate pr-2">${item.name}</span>
+              <span class="font-mono text-pink-600 dark:text-pink-400 shrink-0">${item.correct}/${item.total} (${pct}%)</span>
+            </div>
+            <div class="w-full h-1.5 bg-slate-200 dark:bg-obsidian rounded-full overflow-hidden">
+              <div class="h-full bg-pink-500 rounded-full" style="width: ${pct}%"></div>
+            </div>
+          </div>
+        `;
+      });
+
+      // Render Full Answer Key & Pembahasan
+      const reviewContainer = document.getElementById("reviewQuestionsList");
+      reviewContainer.innerHTML = "";
+      const letters = ["A", "B", "C", "D"];
+
+      state.questions.forEach((q, idx) => {
+        const userAns = state.answers[q.id];
+        const isCorrect = userAns !== undefined && userAns === q.shuffledAns;
+        const userText = userAns !== undefined ? `${letters[userAns]}. ${q.shuffledOpts[userAns]}` : "Tidak dijawab";
+        const correctText = `${letters[q.shuffledAns]}. ${q.shuffledOpts[q.shuffledAns]}`;
+
+        reviewContainer.innerHTML += `
+          <div class="p-4 rounded-2xl border ${
+            isCorrect
+              ? "border-amber-400/50 bg-amber-500/5"
+              : "border-pink-500/45 bg-pink-500/5"
+          } space-y-2">
+            <div class="flex flex-wrap items-center justify-between gap-2">
+              <span class="text-xs font-mono font-bold px-2.5 py-1 rounded-lg ${
+                isCorrect ? "bg-amber-400 text-obsidian" : "bg-pink-500 text-white"
+              }">No. ${idx + 1} (Butir Asli #${q.id}) • ${isCorrect ? "BENAR" : "SALAH"}</span>
+              <span class="text-[11px] font-semibold text-pink-400">${q.genre} | ${q.aspect} | ${q.diff}</span>
+            </div>
+            <p class="text-sm font-bold text-slate-900 dark:text-white">${q.q.replace(/\n/g, "<br/>")}</p>
+            <div class="text-xs space-y-1 pt-1">
+              <p class="${isCorrect ? "text-amber-600 dark:text-amber-400" : "text-pink-600 dark:text-pink-400"} font-semibold">
+                Jawaban Anda: ${userText}
+              </p>
+              ${!isCorrect ? `<p class="text-amber-600 dark:text-amber-400 font-bold">Kunci Jawaban: ${correctText}</p>` : ""}
+              <p class="text-slate-600 dark:text-slate-200 bg-slate-100 dark:bg-obsidian/90 p-2.5 rounded-xl mt-1.5 border border-slate-200 dark:border-velvetBorder">
+                <strong class="text-amber-600 dark:text-amber-400">Pembahasan:</strong> ${q.exp}
+              </p>
+            </div>
+          </div>
+        `;
+      });
+
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+
+    // =========================================================================
+    // 10. HIGH-RESOLUTION GOLDEN-PINK PNG CERTIFICATE GENERATOR (CANVAS)
+    // =========================================================================
+    function downloadCertificatePNG() {
+      const canvas = document.getElementById("certExportCanvas");
+      const ctx = canvas.getContext("2d");
+      const W = canvas.width;
+      const H = canvas.height;
+
+      // Deep Velvet Obsidian Background
+      const bgGrad = ctx.createLinearGradient(0, 0, W, H);
+      bgGrad.addColorStop(0, "#0A070D");
+      bgGrad.addColorStop(0.5, "#181024");
+      bgGrad.addColorStop(1, "#0A070D");
+      ctx.fillStyle = bgGrad;
+      ctx.fillRect(0, 0, W, H);
+
+      // Golden Yellow Outer Border & Neon Pink Inner Border
+      ctx.strokeStyle = "#FFD700";
+      ctx.lineWidth = 10;
+      ctx.strokeRect(36, 36, W - 72, H - 72);
+
+      ctx.strokeStyle = "#FF2A85";
+      ctx.lineWidth = 3;
+      ctx.strokeRect(56, 56, W - 112, H - 112);
+
+      // Corner Gold & Pink Accents
+      ctx.fillStyle = "#FFD700";
+      ctx.fillRect(30, 30, 36, 36);
+      ctx.fillRect(W - 66, 30, 36, 36);
+      ctx.fillStyle = "#FF2A85";
+      ctx.fillRect(30, H - 66, 36, 36);
+      ctx.fillRect(W - 66, H - 66, 36, 36);
+
+      // Header Serial & Phase
+      ctx.fillStyle = "#F472B6";
+      ctx.font = "bold 20px monospace";
+      ctx.textAlign = "left";
+      ctx.fillText(`SERIAL: ${document.getElementById("certSerialId").textContent}`, 95, 110);
+      ctx.textAlign = "right";
+      ctx.fillText("FASE D • KELAS VIII MTs/SMP", W - 95, 110);
+
+      // Certificate Title
+      ctx.textAlign = "center";
+      ctx.fillStyle = "#FFD700";
+      ctx.font = "bold 56px Georgia, serif";
+      ctx.fillText("CERTIFICATE OF ACHIEVEMENT", W / 2, 205);
+
+      ctx.fillStyle = "#FF2A85";
+      ctx.font = "bold 22px sans-serif";
+      ctx.fillText("SERTIFIKAT CAPAIAN LITERASI MEMBACA NARRATIVE TEXT", W / 2, 250);
+
+      // Presented To
+      ctx.fillStyle = "#CBD5E1";
+      ctx.font = "22px sans-serif";
+      ctx.fillText("Diberikan dengan bangga kepada / Proudly presented to:", W / 2, 325);
+
+      // Student Name
+      ctx.fillStyle = "#FFFFFF";
+      ctx.font = "bold 54px Georgia, serif";
+      ctx.fillText(state.student.name.toUpperCase(), W / 2, 410);
+
+      // Gold-Pink Underline under Name
+      ctx.strokeStyle = "#FFD700";
+      ctx.lineWidth = 3;
+      ctx.beginPath();
+      ctx.moveTo(W / 2 - 360, 434);
+      ctx.lineTo(W / 2 + 360, 434);
+      ctx.stroke();
+
+      // Student Details
+      ctx.fillStyle = "#FBCFE8";
+      ctx.font = "bold 24px sans-serif";
+      ctx.fillText(
+        `Kelas: ${state.student.className}   |   No. Presensi: ${state.student.number}   |   Asal Madrasah: ${state.student.school}`,
+        W / 2,
+        486
+      );
+
+      // Description
+      ctx.fillStyle = "#E2E8F0";
+      ctx.font = "21px sans-serif";
+      ctx.fillText(
+        "Telah menyelesaikan Paket Asesmen Sumatif Literasi Membaca: Narrative Text (Kelas VIII)",
+        W / 2,
+        552
+      );
+
+      // Score Pill Box
+      const scoreVal = document.getElementById("certScoreValue").textContent;
+      const predVal = document.getElementById("certPredicate").textContent;
+
+      ctx.fillStyle = "#130D1A";
+      ctx.strokeStyle = "#FFD700";
+      ctx.lineWidth = 3;
+      ctx.fillRect(W / 2 - 260, 595, 520, 95);
+      ctx.strokeRect(W / 2 - 260, 595, 520, 95);
+
+      ctx.fillStyle = "#FFD700";
+      ctx.font = "bold 36px monospace";
+      ctx.fillText(`SKOR: ${scoreVal}`, W / 2, 642);
+      ctx.fillStyle = "#F472B6";
+      ctx.font = "bold 18px sans-serif";
+      ctx.fillText(`PREDIKAT: ${predVal}`, W / 2, 674);
+
+      // Footer Signatures
+      const dateText = document.getElementById("certDateText").textContent;
+      ctx.textAlign = "left";
+      ctx.fillStyle = "#94A3B8";
+      ctx.font = "19px sans-serif";
+      ctx.fillText("Tanggal Penerbitan / Issued Date:", 110, 790);
+      ctx.fillStyle = "#FFFFFF";
+      ctx.font = "bold 22px sans-serif";
+      ctx.fillText(dateText, 110, 825);
+      ctx.fillStyle = "#FF2A85";
+      ctx.font = "17px sans-serif";
+      ctx.fillText("Verified by ASAS Enterprise Proctoring Engine", 110, 860);
+
+      ctx.textAlign = "right";
+      ctx.fillStyle = "#94A3B8";
+      ctx.font = "19px sans-serif";
+      ctx.fillText("Pengembang & Pembuat Aplikasi,", W - 110, 790);
+      ctx.fillStyle = "#FFD700";
+      ctx.font = "italic bold 30px Georgia, serif";
+      ctx.fillText("Ahmad Budi Leksono", W - 110, 845);
+      ctx.fillStyle = "#FFFFFF";
+      ctx.font = "bold 22px sans-serif";
+      ctx.fillText("Ahmad Budi Leksono", W - 110, 882);
+
+      const link = document.createElement("a");
+      const safeName = state.student.name.replace(/[^a-zA-Z0-9]/g, "_");
+      link.download = `Sertifikat_Narrative_VIII_${safeName}.png`;
+      link.href = canvas.toDataURL("image/png");
+      link.click();
+      showToast("Sertifikat PNG berhasil diunduh!", "info");
+    }
+
+    // Initialize default language text on load
+    applyLanguage();
+  </script>
+</body>
+</html>
